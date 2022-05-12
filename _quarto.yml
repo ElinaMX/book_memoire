@@ -2,22 +2,32 @@ project:
   type: book
 
 book:
-  title: "book_memoire"
-  author: "Jane Doe"
+  image: cover.png
+  title: "Gestion d'une base de donnée qualitatives et géometrique"
+  author: "Elina Marveaux \n ENcadrante Université : Antonine Ribardière \nMaitre de stage : Hugues Pécout"
   date: "12/05/2022"
+  output-file: memoire
+  repo-url: https://github.com/ElinaMX/book_memoire
+  downloads: pdf
   chapters:
     - index.qmd
-    - intro.qmd
     - summary.qmd
+    - intro.qmd
     - references.qmd
+    - summary.qmd
+  appendices: 
+    - appendice1.qmd
 
 bibliography: references.bib
 
 format:
   html:
-    theme: cosmo
+    theme: flatly
   pdf:
-    documentclass: scrreprt
+    documentclass: scrbook
+    keep-tex: true
+    papersize: a4
+    pagestyle: headings
 
 editor: visual
 
