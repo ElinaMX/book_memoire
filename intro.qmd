@@ -2,10 +2,11 @@
 
 R table
 ```{r}
+#| echo: true
 data <- data.frame(year =  c("1958", "1959", "1960"), 
                    max = c(317.51, 318.29, 320.04))
 
-# ojs_define(tableR = data)
+ojs_define(tableR = data)
 
 data
 ```
