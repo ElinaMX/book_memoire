@@ -18,7 +18,7 @@
     "href": "intro.html",
     "title": "2  Introduction",
     "section": "",
-    "text": "data <- data.frame(year =  c(\"1958\", \"1959\", \"1960\"), \n                   max = c(317.51, 318.29, 320.04))\n\nojs_define(tableR = data)\n\ndata\n\n  year    max\n1 1958 317.51\n2 1959 318.29\n3 1960 320.04\n\n\nOJS line_chart from tutorial with ojs_define() and R table\n\nyearlyChart = Plot.plot({\n  marks: [\n    Plot.line(tableR, \n      {x: \"year\", y: \"max\"}, \n      { stroke: \"red\" }\n    )\n  ]}\n)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSecond bar chart with python table\n\n\nPlot.rectY(tablePy, Plot.binX({y: \"max\"}, {x: \"year\", fill: \"year\"})).plot()"
+    "text": "data <- data.frame(year =  c(\"1958\", \"1959\", \"1960\"), \n                   max = c(317.51, 318.29, 320.04))\n\n# ojs_define(tableR = data)\n\ndata\n\n  year    max\n1 1958 317.51\n2 1959 318.29\n3 1960 320.04\n\n\nOJS line_chart from tutorial with ojs_define() and R table\n\nyearlyChart = Plot.plot({\n  marks: [\n    Plot.line(tableR, \n      {x: \"year\", y: \"max\"}, \n      { stroke: \"red\" }\n    )\n  ]}\n)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSecond bar chart with python table\n\n\nPlot.rectY(tablePy, Plot.binX({y: \"max\"}, {x: \"year\", fill: \"year\"})).plot()"
   },
   {
     "objectID": "part1.html",

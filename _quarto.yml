@@ -20,7 +20,7 @@ book:
     - appendice1.qmd
 
 bibliography: references.bib
-jupyter: python3
+
 format:
   html:
     theme: journal

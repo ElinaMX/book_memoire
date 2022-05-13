@@ -5,6 +5,7 @@
 \documentclass[
   a4paper,
 ]{scrbook}
+
 \usepackage{amsmath,amssymb}
 \usepackage[]{accanthis}
 \usepackage{iftex}
@@ -34,14 +35,6 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\hypersetup{
-  pdftitle={Gestion d'une base de donnée qualitatives et géometrique},
-  pdfauthor={Elina Marveaux},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
-\urlstyle{same} % disable monospaced font for URLs
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{5}
 % Make \paragraph and \subparagraph free-standing
@@ -142,6 +135,7 @@
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
+
 \usepackage{titling}
 \setlength{\droptitle}{-2cm}
 \preauthor{
@@ -157,7 +151,7 @@
   Master of Science in Biology\\               % Degree
   Biodiversity, Evolution and Ecology\\        % Degree stream
   Department of Biological Sciences\\          % Department
-  University of Bergen\\                       % University
+  University of Bergen\\                       % University 
   \vspace{5mm}
 }
 \postdate{
@@ -222,6 +216,14 @@
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Gestion d'une base de donnée qualitatives et géometrique},
+  pdfauthor={Elina Marveaux},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
 
 \title{Gestion d'une base de donnée qualitatives et géometrique}
 \author{Elina Marveaux}
@@ -230,8 +232,7 @@
 \begin{document}
 \frontmatter
 \maketitle
-
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, boxrule=0pt, sharp corners, enhanced, frame hidden, borderline west={3pt}{0pt}{shadecolor}, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, sharp corners, frame hidden, enhanced, interior hidden, borderline west={3pt}{0pt}{shadecolor}, breakable]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table des matières}
 {
@@ -273,7 +274,53 @@ In summary, this book has no content whatsoever.
 [1] 2
 \end{verbatim}
 
-\part{The Penguins}
+\hypertarget{introduction}{%
+\chapter{Introduction}\label{introduction}}
+
+R table
+
+\begin{Shaded}
+\begin{Highlighting}[numbers=left,,]
+\NormalTok{data }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{year =}  \FunctionTok{c}\NormalTok{(}\StringTok{"1958"}\NormalTok{, }\StringTok{"1959"}\NormalTok{, }\StringTok{"1960"}\NormalTok{), }
+                   \AttributeTok{max =} \FunctionTok{c}\NormalTok{(}\FloatTok{317.51}\NormalTok{, }\FloatTok{318.29}\NormalTok{, }\FloatTok{320.04}\NormalTok{))}
+
+\CommentTok{\# ojs\_define(tableR = data)}
+
+\NormalTok{data}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+  year    max
+1 1958 317.51
+2 1959 318.29
+3 1960 320.04
+\end{verbatim}
+
+\texttt{OJS} line\_chart from tutorial with \texttt{ojs\_define()} and
+\texttt{R} table
+
+\begin{Shaded}
+\begin{Highlighting}[numbers=left,,]
+\NormalTok{yearlyChart = Plot.plot(\{}
+\NormalTok{  marks: [}
+\NormalTok{    Plot.line(tableR, }
+\NormalTok{      \{x: "year", y: "max"\}, }
+\NormalTok{      \{ stroke: "red" \}}
+\NormalTok{    )}
+\NormalTok{  ]\}}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Second bar chart with \texttt{python} table
+
+\begin{Shaded}
+\begin{Highlighting}[numbers=left,,]
+
+\NormalTok{Plot.rectY(tablePy, Plot.binX(\{y: "max"\}, \{x: "year", fill: "year"\})).plot()}
+\end{Highlighting}
+\end{Shaded}
 
 \hypertarget{penguins}{%
 \chapter{``Penguins''}\label{penguins}}
@@ -286,14 +333,14 @@ length and island):
 
 \begin{Shaded}
 \begin{Highlighting}[numbers=left,,]
-\NormalTok{//| echo: false}
+\NormalTok{//| echo = false}
 \NormalTok{data = FileAttachment("data/palmer{-}penguins.csv").csv(\{ typed: true \})}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{Shaded}
 \begin{Highlighting}[numbers=left,,]
-\NormalTok{//| echo: false}
+\NormalTok{//| echo = false}
 \NormalTok{viewof bill\_length\_mm = Inputs.range(}
 \NormalTok{  [32, 50], }
 \NormalTok{  \{value: 35, step: 1, label: "Bill length (min):"\}}
@@ -358,29 +405,12 @@ these penguins.
 
 \includegraphics{./part1_files/figure-pdf/plot-penguins-1.pdf}
 
-\part{}
-
-\hypertarget{introduction}{%
-\chapter{Introduction}\label{introduction}}
-
-This is a book created from markdown and executable code.
-
-See Knuth (1984) for additional discussion of literate programming.
-
-\begin{verbatim}
-[1] 2
-\end{verbatim}
-
 \hypertarget{references}{%
 \chapter*{References}\label{references}}
 \addcontentsline{toc}{chapter}{References}
 
 \hypertarget{refs}{}
-\begin{CSLReferences}{1}{0}
-\leavevmode\vadjust pre{\hypertarget{ref-knuth84}{}}%
-Knuth, Donald E. 1984. {``Literate Programming.''} \emph{Comput. J.} 27
-(2): 97--111. \url{https://doi.org/10.1093/comjnl/27.2.97}.
-
+\begin{CSLReferences}{0}{0}
 \end{CSLReferences}
 
 \hypertarget{summary-1}{%
