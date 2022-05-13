@@ -1,0 +1,60 @@
+Mise en page title page
+---
+title: "brouillon"
+pdf:
+  header-includes: |
+    \usepackage{titling}
+    \setlength{\droptitle}{-2cm}
+    \preauthor{
+      \begin{center}
+      \includegraphics[width=5in,height=4in]{cover.png}\\ % cover figure
+      \Large
+    }
+    \postauthor{
+      \end{center}
+    }
+    \predate{
+      \begin{center}
+      Master of Science in Biology\\               % Degree
+      Biodiversity, Evolution and Ecology\\        % Degree stream
+      Department of Biological Sciences\\          % Department
+      University of Bergen\\                       % University 
+      \vspace{5mm}
+    }
+    \postdate{
+      \\
+      \includegraphics[width=1.5in,height=1.5in]{figures/anr-dfg.jpg}\\
+      \end{center}
+      \newpage
+      \mbox{}
+      \vfill
+      Cover page\\
+      \emph{Beckwithia glacialis} on Snøhetta.
+     }
+---
+
+
+```{tex}
+  \newcommand*{\titleGP}{\begingroup% Geometric Modeling
+  \drop=0.1\textheight
+  \centering
+  \vspace*{\baselineskip}
+  \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+  \rule{\textwidth}{0.4pt}\\[\baselineskip]
+  {\LARGE CONUNDRUMS\\ AND \\[0.3\baselineskip]PUZZLES}\\[0.2\baselineskip]
+  \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+  \rule{\textwidth}{1.6pt}\\[\baselineskip]
+  \scshape
+  Selected and Expanded Papers from the Organisation Working Conference on \\ Enigmas \\
+  Location, date from--to\par
+  \vspace*{2\baselineskip}
+  Edited by \\[\baselineskip]
+  {\Large FIRST EDITOR \\ SECOND EDITOR \\ THIRD EDITOR\par}\\
+  {\itshape Organisation \\ Address\par}
+  \vfill
+  \plogo\\
+  {\scshape year} \\
+  {\large THE PUBLISHER}\par
+  \endgroup}
+
+```

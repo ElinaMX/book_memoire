@@ -7,32 +7,32 @@
     "text": "This is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\nChart Bar des NAS"
   },
   {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "1  Summary",
+    "section": "",
+    "text": "1 + 1\n\n[1] 2"
+  },
+  {
     "objectID": "part1.html",
     "href": "part1.html",
-    "title": "1  Penguins",
+    "title": "2  “Penguins”",
     "section": "",
     "text": "A simple example based on Allison Horst’s Palmer Penguins dataset. Here we look at how penguin body mass varies across both sex and species (use the provided inputs to filter the dataset by bill length and island):"
   },
   {
     "objectID": "part1.html#plot",
     "href": "part1.html#plot",
-    "title": "1  Penguins",
-    "section": "1.1 Plot",
-    "text": "1.1 Plot\n\nPlot.rectY(filtered, \n  Plot.binX(\n    {y: \"count\"}, \n    {x: \"body_mass_g\", fill: \"species\", thresholds: 20}\n  ))\n  .plot({\n    facet: {\n      data: filtered,\n      x: \"sex\",\n      y: \"species\",\n      marginRight: 80\n    },\n    marks: [\n      Plot.frame(),\n    ]\n  }\n)\n\n\n\n\n\nFigure 1.1: Penguin body mass by sex and species"
+    "title": "2  “Penguins”",
+    "section": "2.1 Plot",
+    "text": "2.1 Plot\n\nPlot.rectY(filtered, \n  Plot.binX(\n    {y: \"count\"}, \n    {x: \"body_mass_g\", fill: \"species\", thresholds: 20}\n  ))\n  .plot({\n    facet: {\n      data: filtered,\n      x: \"sex\",\n      y: \"species\",\n      marginRight: 80\n    },\n    marks: [\n      Plot.frame(),\n    ]\n  }\n)\n\n\n\n\n\nFigure 2.1: Penguin body mass by sex and species"
   },
   {
     "objectID": "part1.html#data",
     "href": "part1.html#data",
-    "title": "1  Penguins",
-    "section": "1.2 Data",
-    "text": "1.2 Data\nThe penguins data from the palmerpenguins package contains size measurements for 344 penguins from three species observed on three islands in the Palmer Archipelago, Antarctica./ The plot below shows the relationship between flipper and bill lengths of these penguins."
-  },
-  {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "2  Summary",
-    "section": "",
-    "text": "1 + 1\n\n[1] 2"
+    "title": "2  “Penguins”",
+    "section": "2.2 Data",
+    "text": "2.2 Data\nThe penguins data from the palmerpenguins package contains size measurements for 344 penguins from three species observed on three islands in the Palmer Archipelago, Antarctica./ The plot below shows the relationship between flipper and bill lengths of these penguins."
   },
   {
     "objectID": "intro.html",

@@ -7,4 +7,5 @@ To learn more about Quarto books visit <https://quarto.org/docs/books>.
 ```{r}
 1 + 1
 ```
+
 ![Chart Bar des NAS](figures/bar_classify_Del_29_04_22_17h.png)
