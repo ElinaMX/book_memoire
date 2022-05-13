@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "2  Introduction",
-    "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Gestion d’une base de donnée qualitatives et géometrique",
@@ -14,11 +7,39 @@
     "text": "This is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\nChart Bar des NAS"
   },
   {
+    "objectID": "part1.html",
+    "href": "part1.html",
+    "title": "1  Penguins",
+    "section": "",
+    "text": "A simple example based on Allison Horst’s Palmer Penguins dataset. Here we look at how penguin body mass varies across both sex and species (use the provided inputs to filter the dataset by bill length and island):"
+  },
+  {
+    "objectID": "part1.html#plot",
+    "href": "part1.html#plot",
+    "title": "1  Penguins",
+    "section": "1.1 Plot",
+    "text": "1.1 Plot\n\nPlot.rectY(filtered, \n  Plot.binX(\n    {y: \"count\"}, \n    {x: \"body_mass_g\", fill: \"species\", thresholds: 20}\n  ))\n  .plot({\n    facet: {\n      data: filtered,\n      x: \"sex\",\n      y: \"species\",\n      marginRight: 80\n    },\n    marks: [\n      Plot.frame(),\n    ]\n  }\n)\n\n\n\n\n\nFigure 1.1: Penguin body mass by sex and species"
+  },
+  {
+    "objectID": "part1.html#data",
+    "href": "part1.html#data",
+    "title": "1  Penguins",
+    "section": "1.2 Data",
+    "text": "1.2 Data\nThe penguins data from the palmerpenguins package contains size measurements for 344 penguins from three species observed on three islands in the Palmer Archipelago, Antarctica./ The plot below shows the relationship between flipper and bill lengths of these penguins."
+  },
+  {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "1  Summary",
+    "title": "2  Summary",
     "section": "",
     "text": "1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "3  Introduction",
+    "section": "",
+    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
   },
   {
     "objectID": "references.html",
@@ -32,6 +53,6 @@
     "href": "appendice1.html",
     "title": "Appendix A — More results",
     "section": "",
-    "text": "| | **\\#** More results {#sec-more-results} |\n|—–|—————————————————–|\n| | |\n| | Some results that wouldn’t fit into the main thesis |\n\n\n\ncover"
+    "text": "Some results that wouldn’t fit into the main thesis\n\n\n\ncover"
   }
 ]

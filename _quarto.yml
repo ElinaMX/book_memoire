@@ -2,15 +2,19 @@ project:
   type: book
 
 book:
+  titlepage: test_tile.Rnw
   image: cover.png
   title: "Gestion d'une base de donnée qualitatives et géometrique"
-  author: "Elina Marveaux \n ENcadrante Université : Antonine Ribardière \nMaitre de stage : Hugues Pécout"
+  author: "Elina Marveaux \nEncadrante Université : Antonine Ribardière \nMaitre de stage : Hugues Pécout"
   date: "12/05/2022"
   output-file: memoire
   repo-url: https://github.com/ElinaMX/book_memoire
   downloads: pdf
   chapters:
     - index.qmd
+    - part: "The Penguins"
+      chapters: 
+      - part1.qmd
     - summary.qmd
     - intro.qmd
     - references.qmd
@@ -22,12 +26,16 @@ bibliography: references.bib
 
 format:
   html:
-    theme: flatly
+    theme: litera
+
   pdf:
     documentclass: scrbook
-    keep-tex: true
     papersize: a4
     pagestyle: headings
+    toc: true
+    toc-title: "Table des matières"
+    highlight-style: github
+    keep-tex: true
 
 editor: visual
 
