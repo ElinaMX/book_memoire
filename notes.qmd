@@ -1,0 +1,8 @@
+# A FAIRE
+
+## Dev
+- remplacer code interactif par un screenshot
+- header.tex : pdf:
+                includes:
+                  in_header: header.tex
+                  ou equivalent

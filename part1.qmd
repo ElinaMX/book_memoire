@@ -6,17 +6,19 @@
 
 library(tidyverse)
 library(palmerpenguins)
+library(quarto)
+
 ```
 
 A simple example based on Allison Horst's [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/) dataset. Here we look at how penguin body mass varies across both sex and species (use the provided inputs to filter the dataset by bill length and island):
 
 ```{ojs}
-//| echo: false
+//| echo = false
 data = FileAttachment("data/palmer-penguins.csv").csv({ typed: true })
 ```
 
 ```{ojs }
-//| echo: false
+//| echo = false
 viewof bill_length_mm = Inputs.range(
   [32, 50], 
   {value: 35, step: 1, label: "Bill length (min):"}

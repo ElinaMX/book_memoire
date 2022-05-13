@@ -3,10 +3,6 @@ project:
   output-dir: docs
 
 book:
-  keywords: 
-    - "géomatique"
-    - "base de donnée"
-    - "cartographie"
   title: "Gestion d'une base de donnée qualitatives et géometrique"
   author: "Elina Marveaux"
   date: "12/05/2022"
@@ -16,20 +12,15 @@ book:
   chapters:
     - index.qmd
     - summary.qmd
-    - part: "The Penguins"
-      chapters: 
-      - part1.qmd
-    - part: 
-      chapters:
-      - intro.qmd
-    - part:
+    - intro.qmd
+    - part1.qmd
     - references.qmd
     - summary.qmd
   appendices: 
     - appendice1.qmd
 
 bibliography: references.bib
-
+jupyter: python3
 format:
   html:
     theme: journal

@@ -1,9 +1,46 @@
 # Introduction
 
-This is a book created from markdown and executable code.
-
-See @knuth84 for additional discussion of literate programming.
-
+R table
 ```{r}
-1 + 1
+data <- data.frame(year =  c("1958", "1959", "1960"), 
+                   max = c(317.51, 318.29, 320.04))
+
+# ojs_define(tableR = data)
+
+data
+```
+
+
+
+`OJS` line_chart from tutorial with `ojs_define()` and `R` table
+
+```{ojs}
+yearlyChart = Plot.plot({
+  marks: [
+    Plot.line(tableR, 
+      {x: "year", y: "max"}, 
+      { stroke: "red" }
+    )
+  ]}
+)
+```
+
+<!-- `Python` table -->
+<!-- ```{python} -->
+<!-- import pandas as pd -->
+<!-- d = { -->
+<!--     'year': ['1958', '1959', '1960'], -->
+<!--     'max': [317.5, 318.9, 320.7] -->
+<!-- } -->
+<!-- df = pd.DataFrame(data=d) -->
+
+<!-- ojs_define(tablePy = df) -->
+<!-- ``` -->
+
+
+Second bar chart with `python` table
+```{ojs}
+
+Plot.rectY(tablePy, Plot.binX({y: "max"}, {x: "year", fill: "year"})).plot()
+
 ```
