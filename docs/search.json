@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "Gestion d’une base de donnée qualitatives et géometrique",
     "section": "",
-    "text": "This is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\nChart Bar des NAS"
+    "text": "This is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n\n[1] 2\n\n\n\n\n\nChart Bar des NAS"
   },
   {
     "objectID": "summary.html",
     "href": "summary.html",
     "title": "1  Summary",
     "section": "",
-    "text": "1 + 1\n\n[1] 2"
+    "text": "[1] 2"
   },
   {
     "objectID": "part1.html",
@@ -39,7 +39,7 @@
     "href": "intro.html",
     "title": "3  Introduction",
     "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
   },
   {
     "objectID": "references.html",

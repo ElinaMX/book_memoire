@@ -142,71 +142,34 @@
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
-\newcommand*{\titleDS}{\begingroup% DS Thesis
-\drop=0.1\textheight
-%\vspace*{\drop}
-\centering
-{\Large\bfseries CONUNDRUMS CONSIDERED AS PUZZLES FOR
-THE MIND}\par
-\vspace{0.6\baselineskip}
-{By}\\[0.6\baselineskip]
-{The Candidate\\[0.6\baselineskip]
-A Thesis Submitted to the Graduate\\[0.5\baselineskip]
-Faculty of The University\\[0.5\baselineskip]
-in Partial Fulfillment of the\\[0.5\baselineskip]
-Requirements for the Degree of\\[0.5\baselineskip]
-DEGREE\\[0.5\baselineskip]
-Major Subject: Logic}\par
-\flushleft
-{Approved by the \\
-Examining Committee:}\par
-\vspace{1.5\baselineskip}
-\rule{15em}{0.4pt}\\
-A Professor, Thesis Advisor \\[1\baselineskip]
-\rule{15em}{0.4pt}\\
-Another Professor, Thesis Advisor \\[1\baselineskip]
-\rule{15em}{0.4pt}\\
-A Faculty, Member \\[1\baselineskip]
-\rule{15em}{0.4pt}\\
-Another Faculty, Member \\[1\baselineskip]
-\rule{15em}{0.4pt}\\
-A Third Faculty, Member\par
-\centering
-\vspace{1\baselineskip}
-The University \\
-The Address \\[\baselineskip]
-The Date\par
-\vfill
-\endgroup}
-
-% \usepackage{titling}
-% \setlength{\droptitle}{-2cm}
-% \preauthor{
-%   \begin{center}
-%   \includegraphics[width=5in,height=4in]{cover.png}\\ % cover figure
-%   \Large
-% }
-% \postauthor{
-%   \end{center}
-% }
-% \predate{
-%   \begin{center}
-%   Master of Science in Biology\\               % Degree
-%   Biodiversity, Evolution and Ecology\\        % Degree stream
-%   Department of Biological Sciences\\          % Department
-%   University of Bergen\\                       % University 
-%   \vspace{5mm}
-% }
-% \postdate{
-%   \\
-%   \includegraphics[width=1.5in,height=1.5in]{figures/anr-dfg.jpg}\\
-%   \end{center}
-%   \newpage
-%   \mbox{}
-%   \vfill
-%   Cover page\\
-%   \emph{Beckwithia glacialis} on Snøhetta.
-%  }
+\usepackage{titling}
+\setlength{\droptitle}{-2cm}
+\preauthor{
+  \begin{center}
+  \includegraphics[width=5in,height=4in]{cover.png}\\ % cover figure
+  \Large
+}
+\postauthor{
+  \end{center}
+}
+\predate{
+  \begin{center}
+  Master of Science in Biology\\               % Degree
+  Biodiversity, Evolution and Ecology\\        % Degree stream
+  Department of Biological Sciences\\          % Department
+  University of Bergen\\                       % University
+  \vspace{5mm}
+}
+\postdate{
+  \\
+  \includegraphics[width=1.5in,height=1.5in]{figures/anr-dfg.jpg}\\
+  \end{center}
+  \newpage
+  \mbox{}
+  \vfill
+  Cover page\\
+  \emph{Beckwithia glacialis} on Snøhetta.
+ }
 \makeatletter
 \makeatother
 \makeatletter
@@ -268,7 +231,7 @@ The Date\par
 \frontmatter
 \maketitle
 
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, frame hidden, enhanced, sharp corners, borderline west={3pt}{0pt}{shadecolor}, breakable, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, boxrule=0pt, sharp corners, enhanced, frame hidden, borderline west={3pt}{0pt}{shadecolor}, breakable]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table des matières}
 {
@@ -286,12 +249,6 @@ This is a Quarto book.
 
 To learn more about Quarto books visit
 \url{https://quarto.org/docs/books}.
-
-\begin{Shaded}
-\begin{Highlighting}[numbers=left,,]
-\DecValTok{1} \SpecialCharTok{+} \DecValTok{1}
-\end{Highlighting}
-\end{Shaded}
 
 \begin{verbatim}
 [1] 2
@@ -311,12 +268,6 @@ To learn more about Quarto books visit
 \chapter{Summary}\label{summary}}
 
 In summary, this book has no content whatsoever.
-
-\begin{Shaded}
-\begin{Highlighting}[numbers=left,,]
-\DecValTok{1} \SpecialCharTok{+} \DecValTok{1}
-\end{Highlighting}
-\end{Shaded}
 
 \begin{verbatim}
 [1] 2
@@ -407,18 +358,14 @@ these penguins.
 
 \includegraphics{./part1_files/figure-pdf/plot-penguins-1.pdf}
 
+\part{}
+
 \hypertarget{introduction}{%
 \chapter{Introduction}\label{introduction}}
 
 This is a book created from markdown and executable code.
 
 See Knuth (1984) for additional discussion of literate programming.
-
-\begin{Shaded}
-\begin{Highlighting}[numbers=left,,]
-\DecValTok{1} \SpecialCharTok{+} \DecValTok{1}
-\end{Highlighting}
-\end{Shaded}
 
 \begin{verbatim}
 [1] 2
@@ -440,12 +387,6 @@ Knuth, Donald E. 1984. {``Literate Programming.''} \emph{Comput. J.} 27
 \chapter{Summary}\label{summary-1}}
 
 In summary, this book has no content whatsoever.
-
-\begin{Shaded}
-\begin{Highlighting}[numbers=left,,]
-\DecValTok{1} \SpecialCharTok{+} \DecValTok{1}
-\end{Highlighting}
-\end{Shaded}
 
 \begin{verbatim}
 [1] 2
