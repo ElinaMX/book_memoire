@@ -1,24 +1,28 @@
 # Introduction
 
 R table
+
 ```{r}
 #| echo: true
 data <- data.frame(year =  c("1958", "1959", "1960"), 
                    max = c(317.51, 318.29, 320.04))
 
-# ojs_define(tableR = data)
+ojs_define(data)
 
 data
 ```
 
-
-
 `OJS` line_chart from tutorial with `ojs_define()` and `R` table
 
 ```{ojs}
+tableR = data
+tableOjs = transpose(tableR)
+
+tableOjs
+
 yearlyChart = Plot.plot({
   marks: [
-    Plot.line(tableR, 
+    Plot.line(tableOjs, 
       {x: "year", y: "max"}, 
       { stroke: "red" }
     )
@@ -27,21 +31,37 @@ yearlyChart = Plot.plot({
 ```
 
 <!-- `Python` table -->
+
 <!-- ```{python} -->
+
 <!-- import pandas as pd -->
+
 <!-- d = { -->
+
 <!--     'year': ['1958', '1959', '1960'], -->
+
 <!--     'max': [317.5, 318.9, 320.7] -->
+
 <!-- } -->
+
 <!-- df = pd.DataFrame(data=d) -->
 
 <!-- ojs_define(tablePy = df) -->
+
 <!-- ``` -->
 
+Second bar chart 
 
-Second bar chart with `python` table
 ```{ojs}
 
-Plot.rectY(tablePy, Plot.binX({y: "max"}, {x: "year", fill: "year"})).plot()
+Plot.rectY(tableOjs, Plot.binX({y: "max"}, {x: "year"})).plot()
+```
+Third  bar chart with `python` table
 
+```{ojs}
+Plot.plot({
+  marks: [
+    Plot.barY(tableOjs, {x: "year", y: "max"})
+  ]
+})
 ```
