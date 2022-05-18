@@ -34,7 +34,6 @@ yearlyChart = Plot.plot({
 )
 ```
 
-test
 <!-- `Python` table -->
 
 <!-- ```{python} -->
