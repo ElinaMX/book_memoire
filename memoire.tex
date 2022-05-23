@@ -220,19 +220,19 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
-  pdftitle={Gestion d'une base de donnée qualitatives et géometrique},
+  pdftitle={Gestion d'une base de données qualitative et géometrique},
   pdfauthor={Elina Marveaux},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
-\title{Gestion d'une base de donnée qualitatives et géometrique}
+\title{Gestion d'une base de données qualitative et géometrique}
 \author{Elina Marveaux}
-\date{12/05/2022}
+\date{05/12/2022}
 
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, frame hidden, enhanced, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, sharp corners, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, enhanced, breakable, frame hidden, sharp corners, interior hidden]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table des matières}
 {
@@ -282,19 +282,20 @@ R table
 \begin{Shaded}
 \begin{Highlighting}[numbers=left,,]
 \NormalTok{data }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{year =}  \FunctionTok{c}\NormalTok{(}\StringTok{"1958"}\NormalTok{, }\StringTok{"1959"}\NormalTok{, }\StringTok{"1960"}\NormalTok{), }
-                   \AttributeTok{max =} \FunctionTok{c}\NormalTok{(}\FloatTok{317.51}\NormalTok{, }\FloatTok{318.29}\NormalTok{, }\FloatTok{320.04}\NormalTok{))}
+                   \AttributeTok{max =} \FunctionTok{c}\NormalTok{(}\DecValTok{310}\NormalTok{, }\DecValTok{275}\NormalTok{, }\DecValTok{380}\NormalTok{))}
 
-\CommentTok{\# ojs\_define(tableR = data)}
+
+\CommentTok{\# ojs\_define(data)}
 
 \NormalTok{data}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-  year    max
-1 1958 317.51
-2 1959 318.29
-3 1960 320.04
+  year max
+1 1958 310
+2 1959 275
+3 1960 380
 \end{verbatim}
 
 \texttt{OJS} line\_chart from tutorial with \texttt{ojs\_define()} and
@@ -302,27 +303,50 @@ R table
 
 \begin{Shaded}
 \begin{Highlighting}[numbers=left,,]
+\NormalTok{tableR = data}
 \NormalTok{tableOjs = transpose(tableR)}
+
+\NormalTok{tableOjs}
 
 \NormalTok{yearlyChart = Plot.plot(\{}
 \NormalTok{  marks: [}
 \NormalTok{    Plot.line(tableOjs, }
 \NormalTok{      \{x: "year", y: "max"\}, }
 \NormalTok{      \{ stroke: "red" \}}
-\NormalTok{    )}
-\NormalTok{  ]\}}
+\NormalTok{    ),}
+\NormalTok{    Plot.ruleY([0])}
+\NormalTok{  ],}
+\NormalTok{  caption: html\textasciigrave{}\textless{}em\textgreater{}FIG.\textless{}/em\textgreater{} This is a line chart stating at 0\textasciigrave{}}
+\NormalTok{  \}}
 \NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
-Second bar chart with \texttt{python} table
+Second bar chart
 
 \begin{Shaded}
 \begin{Highlighting}[numbers=left,,]
 
-\NormalTok{Plot.rectY(tableOjs, Plot.binX(\{y: "max"\}, \{x: "year", fill: "year"\})).plot()}
+\NormalTok{Plot.rectY(tableOjs, Plot.binX(\{y: "max"\}, \{x: "year"\})).plot()}
 \end{Highlighting}
 \end{Shaded}
+
+Third bar chart with table
+
+\begin{Shaded}
+\begin{Highlighting}[numbers=left,,]
+\NormalTok{Plot.plot(\{}
+\NormalTok{  marks: [}
+\NormalTok{    Plot.barY(tableOjs, \{x: "year", y: "max", fill: "steelblue"\}),}
+\NormalTok{    Plot.ruleY([0])}
+\NormalTok{  ],}
+\NormalTok{  caption: html\textasciigrave{}Figure 1. This chart has a \textless{}i\textgreater{}fancy\textless{}/i\textgreater{} caption.\textasciigrave{}}
+\NormalTok{\})}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{with-python}{%
+\section{With Python}\label{with-python}}
 
 \hypertarget{penguins}{%
 \chapter{``Penguins''}\label{penguins}}

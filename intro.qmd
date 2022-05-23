@@ -8,7 +8,7 @@ data <- data.frame(year =  c("1958", "1959", "1960"),
                    max = c(310, 275, 380))
 
 
-ojs_define(data)
+# ojs_define(data)
 
 data
 ```
@@ -34,6 +34,26 @@ yearlyChart = Plot.plot({
 )
 ```
 
+Second bar chart 
+
+```{ojs}
+
+Plot.rectY(tableOjs, Plot.binX({y: "max"}, {x: "year"})).plot()
+```
+Third  bar chart with table
+
+```{ojs}
+Plot.plot({
+  marks: [
+    Plot.barY(tableOjs, {x: "year", y: "max", fill: "steelblue"}),
+    Plot.ruleY([0])
+  ],
+  caption: html`Figure 1. This chart has a <i>fancy</i> caption.`
+})
+```
+
+## With Python
+
 <!-- `Python` table -->
 
 <!-- ```{python} -->
@@ -54,20 +74,17 @@ yearlyChart = Plot.plot({
 
 <!-- ``` -->
 
-Second bar chart 
+<!-- ```{ojs} -->
+<!-- tablePy = data -->
+<!-- tablePyOjs = transpose(tablePy) -->
 
-```{ojs}
+<!-- tablePyOjs -->
 
-Plot.rectY(tableOjs, Plot.binX({y: "max"}, {x: "year"})).plot()
-```
-Third  bar chart with `python` table
-
-```{ojs}
-Plot.plot({
-  marks: [
-    Plot.barY(tableOjs, {x: "year", y: "max", fill: "steelblue"}),
-    Plot.ruleY([0])
-  ],
-  caption: html`Figure 1. This chart has a <i>fancy</i> caption.`
-})
-```
+<!-- Plot.plot({ -->
+<!--   marks: [ -->
+<!--     Plot.barY(tablePyOjs, {x: "year", y: "max", fill: "steelblue"}), -->
+<!--     Plot.ruleY([0]) -->
+<!--   ], -->
+<!--   caption: html`Figure 1. This chart has a <i>fancy</i> caption.` -->
+<!-- }) -->
+<!-- ``` -->
