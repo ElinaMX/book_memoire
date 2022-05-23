@@ -8,7 +8,7 @@ data <- data.frame(year =  c("1958", "1959", "1960"),
                    max = c(310, 275, 380))
 
 
-# ojs_define(data)
+ojs_define(data)
 
 data
 ```
