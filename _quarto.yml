@@ -8,7 +8,6 @@ book:
   date: "05/12/2022"
   output-file: memoire
   repo-url: https://github.com/ElinaMX/book_memoire
-  downloads: pdf
   chapters:
     - index.qmd
     - summary.qmd
@@ -20,10 +19,6 @@ book:
 bibliography: references.bib
 
 format:
-  html:
-    theme: journal
-    echo: false
-
   pdf:
     echo: false
     documentclass: scrbook
