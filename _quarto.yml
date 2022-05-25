@@ -13,9 +13,7 @@ book:
     - index.qmd
     - summary.qmd
     - intro.qmd
-    - part1.qmd
     - references.qmd
-    - summary.qmd
   appendices: 
     - appendice1.qmd
 
