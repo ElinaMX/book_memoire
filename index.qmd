@@ -1,10 +1,25 @@
-# Preface {.unnumbered}
+# Introduction
+
+Elle doit mentionner : les objectifs, les lieux d'étude, l'intérêt du projet : pour un public particulier
+? Une nouvelle méthodologie ? Une monographie sur un espace donné ? Durée.
+Un rapport orienté « recherche » développera la problématique qui sous-tend le questionnement
+de recherche et formulera, le cas échéant, les hypothèses de travail.
+
+
+```{r}
+if(knitr::is_latex_output()){
+  knitr::knit_exit() # don't print this cover page if printing to pdf
+}
+```
+
+-----
 
 This is a Quarto book.
 
 To learn more about Quarto books visit <https://quarto.org/docs/books>.
 
 ```{r}
+#| echo: true
 1 + 1
 ```
 

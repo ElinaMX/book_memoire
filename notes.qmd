@@ -5,4 +5,33 @@
 - header.tex : pdf:
                 includes:
                   in_header: header.tex
-                  ou equivalent
+                  ou équivalent
+                  
+https://quarto.org/docs/reference/formats/context.html
+
+
+
+
+  https://quarto.org/docs/get-started/authoring/rstudio.html
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

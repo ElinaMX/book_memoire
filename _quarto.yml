@@ -3,15 +3,21 @@ project:
   output-dir: docs
 
 book:
+  lang: fr
   title: "Gestion d'une base de données qualitative et géometrique"
   author: "Elina Marveaux"
-  date: "05/12/2022"
+  date: "12-06-2022"
   output-file: memoire
   repo-url: https://github.com/ElinaMX/book_memoire
   chapters:
+    # - summary.qmd
     - index.qmd
-    - summary.qmd
-    - intro.qmd
+    # - intro.qmd
+    - antonine.qmd
+    - contenu.qmd
+    - resultats.qmd
+    - conclusion.qmd
+    - remerciements.qmd
     - references.qmd
   appendices: 
     - appendice1.qmd
@@ -26,14 +32,23 @@ format:
     pagestyle: headings
     toc: true
     toc-title: "Table des matières"
-    lof: true
-    lot: true
+    # lof: true
+    # lot: true
     code-line-numbers: true
-    fontfamily: accanthis
+    fontfamily: gfsartemisia
+    # fontenc: gfsartemisia
     highlight-style: github
+    interlinespace: \setupinterlinespace[line=1.5pt]
+    geometry: 
+      - margin = 2.5cm
+
     keep-tex: true
     include-in-header:
-    - header.tex
+      - header.tex
+    include-before-body: 
+      - 00_resume.qmd
+    # include-after-body: 
+    
 
 
 editor: visual

@@ -1,0 +1,55 @@
+# Contenu central du rapport
+
+Il comporte deux ou trois parties (1, 2, 3) subdivisées en deux ou trois sous parties ( 1.1, 1.2, 1.3) tout au plus. En lisant les titres des 4 à 9 sous parties, on doit pouvoir se faire une idée du contenu et de la démarche de l'étude. Le texte est fait pour être lu par une personne qui n'a pas suivi le travail du stagiaire. Un rapport orienté « recherche » intégrera obligatoirement une partie « état de l'art » et valorisera les références bibliographiques.
+
+## La forme du mémoire
+
+-   utiliser souvent les illustrations et les graphiques, notamment pour les chaines de traitement et l'organisation. il est important que le mémoire reste lisible et très rapidement compréhensible.
+
+-   **Etat de l'art** : Surtout un état de l'existant notamment en matière d'outils et de méthodologie. Le stage reste un stage ingénieur, et non pas de recherche. Il faut mettre en avant ce qui a déjà été produit en terme technique (exemple : si je rencontre un problème, la solution existe probablement déjà, il faut alors que je fasse été de cette ou ces solutions et que je discute de ce que j'en fait, comment je l'adapte à mon travail etc
+
+-   Deux options pour le plan :
+
+    -   Classique : 3 parties reprenant chacune tous les objectifs / sous projets
+
+        -   Contexte (structure, projet, enjeux du projet, comment le stage s'insère dans le projet, quels acteurs sont rencontrés et quels sont leurs rôles)
+
+-   Méthodologie mise en place
+
+-   Résultats avec mise en perspective, retour sur le travail effectué
+
+-   ou alors Une partie par projet / Objectif reprenant chacune les parties précédemment décrites
+
+-   1 : exploration BDR :
+
+-   Contexte/méthodologie/résultats
+
+-   2 : Exploration des géométries
+
+-   Contexte/méthodologie/résultats
+
+-   Bien mettre en avant ce que j'ai découvert, ce que j'ai **proposé** les difficultés rencontrées et les problèmes soulevés même s'ils n'ont pas été résolus
+
+-   **OBJECTIFS** : reproductibilité, analyse, mise à disposition des données (et proposition d'exploitation de ces données)
+
+-   
+
+## Mise en page
+
+-   [ ] Police taille 11 / 12
+
+-   [ ] Interligne : 1.5
+
+-   [x] Texte justifié
+
+-   [ ] Alinea 0.5 / 1
+
+-   [ ] Notes de bas de page 9 / 10
+
+-   [ ] Meme police y compris titres
+
+-   [ ] Ligne sous le titre d'un chapitre
+
+-   [ ] **Marges** : 2.54
+
+-   [ ] 

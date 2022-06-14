@@ -1,0 +1,55 @@
+# Notes rendez-vous Antoine
+
+Dimension politique des visualisation à mettre en avant
+
+## Les visualisations
+
+Faire la différences entres les visualisations des polygone sen internes pour leur diagnostique et la présentation des "problèmes" et la représentation finale, les cartographies qui doivent être finie et présentées comme résultat et non pas comme exploration.\
+Les deux modes de représentations font appels à des enjeux différents (ainsi que des publiques, objectifs)
+
+## Méthodologie
+
+-   Décrire la méthodologie
+-   Quelle est la qualité de l'information :
+-   Qualité du point de vue de la géomatique
+-   Quels biais introduits dans les enquêtes "habituelles " ou en tout cas celle précédent celle-ci (eurobroadmap)
+-   Quel biais introduits par la méthodologie actuelle, quel enjeux vis à vis du choix de l'outil
+-   Comment sont identifiés/détectés les problèmes dans la BD et BDG, quelles propositions sont avancées , lesquelles sont mises en place et comment trancher ? \*\*proposer une chaîne de traitement sous forme d'image"
+-   Voir Lena Sanders : modèle LOgit pour explorer la significativité ou non du univ_field
+-   Quelle pondération de polygones lorsqu'ils se superposent, lorsqu'ils n'ont pas la même taille mais décrivent des ensembles similaires (pays) ou lorsqu'il sont multi-polygones donc séparés et parfois se recouvrent
+-   Comment analyser les aires disjointes ou emboîtées ?
+-   
+
+## Analyse du besoin en amont ?
+
+## Livrables
+
+-   Quels sont les produits à réalisés et à qui s'adressent-ils ?
+  -   Priorité sur les **géométries** et leur enjeux :
+  -   plusieurs dessins sont autorisées
+
+-   plusieurs modes de saisi sont possibles chacun avec leur biais
+
+-   Plusieurs problèmes en découlent
+
+-   
+  -   Base de donnée Géo et Respondent avec documents de présentation
+-   explorations de la BDG :
+  -   Visualisations exploratoires et travail de représentation pour le diagnostic (explorer les chorèmes pour proposer une typologie des polygones et relations rencontrées dans la BDG)
+
+-   Visualisations finales / exploratoires en tant de résultats de l'exploration : on parle de représentations visant à proposer certaines interprétations des résultats (sous formes de prototypes car la valorisation finale est attendue en dehors du cadre du stage)
+
+## GIT
+
+-   expliquer l'intérêt de l'outil
+-   Faire la différence entre 'usage généraliste de l'outil et l'usage qu'on en fait en interne (dans le care du stage notamment)
+-   Expliquer pourquoi une page web et quel est l'intérêt (éventuellement pour mettre à disposition des résultats du stage et la présentation du mémoire ar exemple)
+
+## Gestion de projet / Workshop
+
+Ici discuter des apports du stage dans le domaine de la gestion de projet et de la mise en place d'un workshop. - Dans quelle mesure suis-je force de proposition - Quel suivi, même informel est mis ou ai-je mis en place ? Finalement le suivi est assez souple, je suis libre de faire ce que je veux mais le cadre est bien posé et les objectifs déterminés. Par exemple, j'ai été accompagnée dans la découverte de la BD e des premiers scripts exploratoires, j'ai eu comme objectif de réaliser un document de présentation de cette base de donnée et des traitements qui y ont été réalisés pour la rendre propre ou qui peuvent être réalisés dessus en guise d'exploration. J'ai le champ libre pour la réalisation de ce document concernant à la fois les outils que j'utilise et ce que j'y met. Je reste encadrée lorsque j'ai des questions et ait besoin d'être recadrée.
+
+-   Mettre ne avant l'informel : les formations et les autres projets/ présentations auxquelles j'ai été invitées à participer
+
+-   Parler des compétences acquises en matière de logiciels/ technique (quarto, redaction latex/yaml, regex, git )
+

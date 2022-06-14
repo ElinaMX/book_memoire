@@ -7,7 +7,7 @@
 ]{scrbook}
 
 \usepackage{amsmath,amssymb}
-\usepackage[]{accanthis}
+\usepackage[]{gfsartemisia}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
@@ -35,6 +35,7 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
+\usepackage[margin = 2.5cm]{geometry}
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{5}
 % Make \paragraph and \subparagraph free-standing
@@ -48,6 +49,44 @@
 \fi
 \pagestyle{headings}
 
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.33,0.33}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.42,0.45,0.49}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.84,0.23,0.29}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.36,0.77}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.84,0.23,0.29}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.01,0.18,0.38}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.42,0.45,0.49}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.42,0.45,0.49}{#1}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.36,0.77}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.84,0.23,0.29}{#1}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.84,0.23,0.29}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.36,0.77}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.42,0.45,0.49}{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.33,0.33}{\underline{#1}}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.84,0.23,0.29}{\textbf{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.36,0.77}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.44,0.26,0.76}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.01,0.18,0.38}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.42,0.45,0.49}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.84,0.23,0.29}{#1}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.14,0.16,0.18}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.14,0.16,0.18}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.44,0.26,0.76}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.84,0.23,0.29}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.42,0.45,0.49}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.36,0.77}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.01,0.18,0.38}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.01,0.18,0.38}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.89,0.38,0.04}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.01,0.18,0.38}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{1.00,0.33,0.33}{#1}}
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
@@ -97,36 +136,41 @@
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
-
 \usepackage{titling}
-\setlength{\droptitle}{-2cm}
+\setlength{\droptitle}{-3cm}
 \preauthor{
   \begin{center}
   \includegraphics[width=5in,height=4in]{cover.png}\\ % cover figure
   \Large
+  \vspace{10mm}
 }
 \postauthor{
   \end{center}
 }
 \predate{
   \begin{center}
-  Master of Science in Biology\\               % Degree
-  Biodiversity, Evolution and Ecology\\        % Degree stream
-  Department of Biological Sciences\\          % Department
-  University of Bergen\\                       % University 
+  Collège International des Scicences Territoriales \\ 
+  Encadré par Hugues Pécout - Ingénieur de recherche, géomaticien\\
+  \vspace{5mm}
+  Master Carthagéo\\
   \vspace{5mm}
 }
 \postdate{
+  \vspace{10mm}
   \\
-  \includegraphics[width=1.5in,height=1.5in]{figures/anr-dfg.jpg}\\
+  \includegraphics[width=4in,height=1in]{figures/logos/logos3.jpg}\\
+  % \includegraphics[width=1.5in,height=1.5in]{figures/logos/logos.jpg}\\
   \end{center}
   \newpage
   \mbox{}
   \vfill
-  Cover page\\
-  \emph{Beckwithia glacialis} on Snøhetta.
+  % Cover page\\
+  % \emph{Beckwithia glacialis} on Snøhetta.
  }
 \makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
 \makeatother
 \makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
@@ -189,29 +233,277 @@
 
 \title{Gestion d'une base de données qualitative et géometrique}
 \author{Elina Marveaux}
-\date{05/12/2022}
+\date{12-06-2022}
 
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, sharp corners, frame hidden, breakable, interior hidden]}{\end{tcolorbox}}\fi
+Résumé
+
+Résumé du stage (dont le sujet) en 10 lignes en français et en anglais.
+Informatif et concis, ce résumé doit refléter l'esprit du document, définir les buts et les méthodes,
+les résultats et les conclusions. Il se présente sous la forme d'un paragraphe unique, sans alinéa.
+
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, frame hidden, interior hidden, borderline west={3pt}{0pt}{shadecolor}, breakable, boxrule=0pt, sharp corners]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table des matières}
 {
 \setcounter{tocdepth}{2}
 \tableofcontents
 }
-\listoffigures
-\listoftables
 \mainmatter
-\hypertarget{preface}{%
-\chapter*{Preface}\label{preface}}
-\addcontentsline{toc}{chapter}{Preface}
+\bookmarksetup{startatroot}
+
+\hypertarget{introduction}{%
+\chapter{Introduction}\label{introduction}}
+
+Elle doit mentionner : les objectifs, les lieux d'étude, l'intérêt du
+projet : pour un public particulier ? Une nouvelle méthodologie ? Une
+monographie sur un espace donné ? Durée. Un rapport orienté « recherche
+» développera la problématique qui sous-tend le questionnement de
+recherche et formulera, le cas échéant, les hypothèses de travail.
+
+\bookmarksetup{startatroot}
+
+\hypertarget{notes-rendez-vous-antoine}{%
+\chapter{Notes rendez-vous Antoine}\label{notes-rendez-vous-antoine}}
+
+Dimension politique des visualisation à mettre en avant
+
+\hypertarget{les-visualisations}{%
+\section{Les visualisations}\label{les-visualisations}}
+
+Faire la différences entres les visualisations des polygone sen internes
+pour leur diagnostique et la présentation des ``problèmes'' et la
+représentation finale, les cartographies qui doivent être finie et
+présentées comme résultat et non pas comme exploration.\\
+Les deux modes de représentations font appels à des enjeux différents
+(ainsi que des publiques, objectifs)
+
+\hypertarget{muxe9thodologie}{%
+\section{Méthodologie}\label{muxe9thodologie}}
+
+\begin{itemize}
+\tightlist
+\item
+  Décrire la méthodologie
+\item
+  Quelle est la qualité de l'information :
+\item
+  Qualité du point de vue de la géomatique
+\item
+  Quels biais introduits dans les enquêtes ``habituelles'' ou en tout
+  cas celle précédent celle-ci (eurobroadmap)
+\item
+  Quel biais introduits par la méthodologie actuelle, quel enjeux vis à
+  vis du choix de l'outil
+\item
+  Comment sont identifiés/détectés les problèmes dans la BD et BDG,
+  quelles propositions sont avancées , lesquelles sont mises en place et
+  comment trancher ? **proposer une chaîne de traitement sous forme
+  d'image''
+\item
+  Voir Lena Sanders : modèle LOgit pour explorer la significativité ou
+  non du univ\_field
+\item
+  Quelle pondération de polygones lorsqu'ils se superposent, lorsqu'ils
+  n'ont pas la même taille mais décrivent des ensembles similaires
+  (pays) ou lorsqu'il sont multi-polygones donc séparés et parfois se
+  recouvrent
+\item
+  Comment analyser les aires disjointes ou emboîtées ?
+\item
+\end{itemize}
+
+\hypertarget{analyse-du-besoin-en-amont}{%
+\section{Analyse du besoin en amont
+?}\label{analyse-du-besoin-en-amont}}
+
+\hypertarget{livrables}{%
+\section{Livrables}\label{livrables}}
+
+\begin{itemize}
+\item
+  Quels sont les produits à réalisés et à qui s'adressent-ils ?
+\item
+  Priorité sur les \textbf{géométries} et leur enjeux :
+\item
+  plusieurs dessins sont autorisées
+\item
+  plusieurs modes de saisi sont possibles chacun avec leur biais
+\item
+  Plusieurs problèmes en découlent
+\item
+\item
+  Base de donnée Géo et Respondent avec documents de présentation
+\item
+  explorations de la BDG :
+\item
+  Visualisations exploratoires et travail de représentation pour le
+  diagnostic (explorer les chorèmes pour proposer une typologie des
+  polygones et relations rencontrées dans la BDG)
+\item
+  Visualisations finales / exploratoires en tant de résultats de
+  l'exploration : on parle de représentations visant à proposer
+  certaines interprétations des résultats (sous formes de prototypes car
+  la valorisation finale est attendue en dehors du cadre du stage)
+\end{itemize}
+
+\hypertarget{git}{%
+\section{GIT}\label{git}}
+
+\begin{itemize}
+\tightlist
+\item
+  expliquer l'intérêt de l'outil
+\item
+  Faire la différence entre 'usage généraliste de l'outil et l'usage
+  qu'on en fait en interne (dans le care du stage notamment)
+\item
+  Expliquer pourquoi une page web et quel est l'intérêt (éventuellement
+  pour mettre à disposition des résultats du stage et la présentation du
+  mémoire ar exemple)
+\end{itemize}
+
+\hypertarget{gestion-de-projet-workshop}{%
+\section{Gestion de projet /
+Workshop}\label{gestion-de-projet-workshop}}
+
+Ici discuter des apports du stage dans le domaine de la gestion de
+projet et de la mise en place d'un workshop. - Dans quelle mesure
+suis-je force de proposition - Quel suivi, même informel est mis ou
+ai-je mis en place ? Finalement le suivi est assez souple, je suis libre
+de faire ce que je veux mais le cadre est bien posé et les objectifs
+déterminés. Par exemple, j'ai été accompagnée dans la découverte de la
+BD e des premiers scripts exploratoires, j'ai eu comme objectif de
+réaliser un document de présentation de cette base de donnée et des
+traitements qui y ont été réalisés pour la rendre propre ou qui peuvent
+être réalisés dessus en guise d'exploration. J'ai le champ libre pour la
+réalisation de ce document concernant à la fois les outils que j'utilise
+et ce que j'y met. Je reste encadrée lorsque j'ai des questions et ait
+besoin d'être recadrée.
+
+\begin{itemize}
+\item
+  Mettre ne avant l'informel : les formations et les autres projets/
+  présentations auxquelles j'ai été invitées à participer
+\item
+  Parler des compétences acquises en matière de logiciels/ technique
+  (quarto, redaction latex/yaml, regex, git )
+\end{itemize}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{contenu-central-du-rapport}{%
+\chapter{Contenu central du rapport}\label{contenu-central-du-rapport}}
+
+Il comporte deux ou trois parties (1, 2, 3) subdivisées en deux ou trois
+sous parties ( 1.1, 1.2, 1.3) tout au plus. En lisant les titres des 4 à
+9 sous parties, on doit pouvoir se faire une idée du contenu et de la
+démarche de l'étude. Le texte est fait pour être lu par une personne qui
+n'a pas suivi le travail du stagiaire. Un rapport orienté « recherche »
+intégrera obligatoirement une partie « état de l'art » et valorisera les
+références bibliographiques.
+
+\hypertarget{la-forme-du-muxe9moire}{%
+\section{La forme du mémoire}\label{la-forme-du-muxe9moire}}
+
+\begin{itemize}
+\item
+  utiliser souvent les illustrations et les graphiques, notamment pour
+  les chaines de traitement et l'organisation. il est important que le
+  mémoire reste lisible et très rapidement compréhensible.
+\item
+  \textbf{Etat de l'art} : Surtout un état de l'existant notamment en
+  matière d'outils et de méthodologie. Le stage reste un stage
+  ingénieur, et non pas de recherche. Il faut mettre en avant ce qui a
+  déjà été produit en terme technique (exemple : si je rencontre un
+  problème, la solution existe probablement déjà, il faut alors que je
+  fasse été de cette ou ces solutions et que je discute de ce que j'en
+  fait, comment je l'adapte à mon travail etc
+\item
+  Deux options pour le plan :
+
+  \begin{itemize}
+  \item
+    Classique : 3 parties reprenant chacune tous les objectifs / sous
+    projets
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Contexte (structure, projet, enjeux du projet, comment le stage
+      s'insère dans le projet, quels acteurs sont rencontrés et quels
+      sont leurs rôles)
+    \end{itemize}
+  \end{itemize}
+\item
+  Méthodologie mise en place
+\item
+  Résultats avec mise en perspective, retour sur le travail effectué
+\item
+  ou alors Une partie par projet / Objectif reprenant chacune les
+  parties précédemment décrites
+\item
+  1 : exploration BDR :
+\item
+  Contexte/méthodologie/résultats
+\item
+  2 : Exploration des géométries
+\item
+  Contexte/méthodologie/résultats
+\item
+  Bien mettre en avant ce que j'ai découvert, ce que j'ai
+  \textbf{proposé} les difficultés rencontrées et les problèmes soulevés
+  même s'ils n'ont pas été résolus
+\item
+  \textbf{OBJECTIFS} : reproductibilité, analyse, mise à disposition des
+  données (et proposition d'exploitation de ces données)
+\item
+\end{itemize}
+
+\hypertarget{mise-en-page}{%
+\section{Mise en page}\label{mise-en-page}}
+
+\begin{itemize}
+\item[$\square$]
+  Police taille 11 / 12
+\item[$\square$]
+  Interligne : 1.5
+\item[$\boxtimes$]
+  Texte justifié
+\item[$\square$]
+  Alinea 0.5 / 1
+\item[$\square$]
+  Notes de bas de page 9 / 10
+\item[$\square$]
+  Meme police y compris titres
+\item[$\square$]
+  Ligne sous le titre d'un chapitre
+\item[$\square$]
+  \textbf{Marges} : 2.54
+\item
+  {[} {]}
+\end{itemize}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{ruxe9sultats}{%
+\chapter{Résultats}\label{ruxe9sultats}}
+
+Ils comportent les éléments qui permettent d'apprécier si la démarche,
+la méthode, etc\ldots{} sont utilisables, généralisables \ldots.
 
 This is a Quarto book.
 
 To learn more about Quarto books visit
 \url{https://quarto.org/docs/books}.
+
+\begin{Shaded}
+\begin{Highlighting}[numbers=left,,]
+\DecValTok{1} \SpecialCharTok{+} \DecValTok{1}
+\end{Highlighting}
+\end{Shaded}
 
 \begin{verbatim}
 [1] 2
@@ -227,19 +519,117 @@ To learn more about Quarto books visit
 
 \end{figure}
 
-\hypertarget{summary}{%
-\chapter{Summary}\label{summary}}
+Voici un graphique produir avec \texttt{R} et dot on peut lire le
+(court) script
 
-In summary, this book has no content whatsoever.
+\begin{Shaded}
+\begin{Highlighting}[numbers=left,,]
+\FunctionTok{plot}\NormalTok{(cars)}
+\FunctionTok{plot}\NormalTok{(pressure)}
+\end{Highlighting}
+\end{Shaded}
 
-\begin{verbatim}
-[1] 2
-\end{verbatim}
+\begin{figure}
 
-\hypertarget{introduction}{%
-\chapter{Introduction}\label{introduction}}
+\begin{minipage}[t]{0.50\linewidth}
 
-R table
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./resultats_files/figure-pdf/unnamed-chunk-1-1.pdf}
+
+}
+
+\caption{Speed and Stopping Distances of Cars}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./resultats_files/figure-pdf/unnamed-chunk-1-2.pdf}
+
+}
+
+\caption{Vapor Pressure of Mercury as a Function of Temperature}
+
+}
+
+\end{minipage}%
+
+\end{figure}
+
+Ceci est un exemple de diagramme écrit en \texttt{mermaid}
+
+\begin{Shaded}
+\begin{Highlighting}[numbers=left,,]
+
+\NormalTok{flowchart LR}
+\NormalTok{  A[Hard edge] {-}{-}\textgreater{} B(Round edge)}
+\NormalTok{  B {-}{-}\textgreater{} C\{Decision\}}
+\NormalTok{  C {-}{-}\textgreater{} D[Result one]}
+\NormalTok{  C {-}{-}\textgreater{} E[Result two]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=5.74in,height=1.4in]{./resultats_files/figure-latex/mermaid-figure-1.png}
+
+}
+
+\end{figure}
+
+Un autre exemple de diagramme
+
+\begin{Shaded}
+\begin{Highlighting}[numbers=left,,]
+
+\NormalTok{sequenceDiagram}
+\NormalTok{  participant Alice}
+\NormalTok{  participant Bob}
+\NormalTok{  Alice{-}\textgreater{}\textgreater{}John: Hello John, how are you?}
+\NormalTok{  loop Healthcheck}
+\NormalTok{    John{-}\textgreater{}\textgreater{}John: Fight against hypochondria}
+\NormalTok{  end}
+\NormalTok{  Note right of John: Rational thoughts \textless{}br/\textgreater{}prevail!}
+\NormalTok{  John{-}{-}\textgreater{}\textgreater{}Alice: Great!}
+\NormalTok{  John{-}\textgreater{}\textgreater{}Bob: How about you?}
+\NormalTok{  Bob{-}{-}\textgreater{}\textgreater{}John: Jolly good!}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=7.81in,height=6.13in]{./resultats_files/figure-latex/mermaid-figure-2.png}
+
+}
+
+\end{figure}
+
+mermaid diagram
+
+\bookmarksetup{startatroot}
+
+\hypertarget{conclusion}{%
+\chapter{Conclusion}\label{conclusion}}
+
+Dans quelles conditions peut-on la généraliser ? Quelles réponses ont
+été données ? Quelles sont celles qui ne l'ont pas été ? Que faut-il
+envisager pour l'avenir ?
+
+\bookmarksetup{startatroot}
+
+\hypertarget{remerciements-uxe9ventuels}{%
+\chapter{Remerciements éventuels}\label{remerciements-uxe9ventuels}}
+
+\bookmarksetup{startatroot}
 
 \hypertarget{references}{%
 \chapter*{References}\label{references}}
