@@ -38,7 +38,7 @@ format:
     fontfamily: gfsartemisia
     # fontenc: gfsartemisia
     highlight-style: github
-    interlinespace: \setupinterlinespace[line=1.5pt]
+    interlinespace: 4pt
     geometry: 
       - margin = 2.5cm
 

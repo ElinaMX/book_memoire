@@ -10,29 +10,19 @@ Il comporte deux ou trois parties (1, 2, 3) subdivisées en deux ou trois sous p
 
 -   Deux options pour le plan :
 
-    -   Classique : 3 parties reprenant chacune tous les objectifs / sous projets
+  -   Classique : 3 parties reprenant chacune tous les objectifs / sous projets
+    -   Contexte (structure, projet, enjeux du projet, comment le stage s'insère dans le projet, quels acteurs sont rencontrés et quels sont leurs rôles)
 
-        -   Contexte (structure, projet, enjeux du projet, comment le stage s'insère dans le projet, quels acteurs sont rencontrés et quels sont leurs rôles)
-
--   Méthodologie mise en place
-
--   Résultats avec mise en perspective, retour sur le travail effectué
-
--   ou alors Une partie par projet / Objectif reprenant chacune les parties précédemment décrites
-
--   1 : exploration BDR :
-
--   Contexte/méthodologie/résultats
-
--   2 : Exploration des géométries
-
--   Contexte/méthodologie/résultats
+    -   Méthodologie mise en place
+    -   Résultats avec mise en perspective, retour sur le travail effectué
+  -   ou alors Une partie par projet / Objectif reprenant chacune les parties précédemment décrites
+  -   1 : exploration BDR :
+    -   Contexte/méthodologie/résultats
+  -   2 : Exploration des géométries
+    -   Contexte/méthodologie/résultats
 
 -   Bien mettre en avant ce que j'ai découvert, ce que j'ai **proposé** les difficultés rencontrées et les problèmes soulevés même s'ils n'ont pas été résolus
-
--   **OBJECTIFS** : reproductibilité, analyse, mise à disposition des données (et proposition d'exploitation de ces données)
-
--   
+-   **OBJECTIFS** : reproductibilité, analyse, mise à disposition des données (et proposition d'exploitation de ces données
 
 ## Mise en page
 
@@ -52,4 +42,4 @@ Il comporte deux ou trois parties (1, 2, 3) subdivisées en deux ou trois sous p
 
 -   [ ] **Marges** : 2.54
 
--   [ ] 
+-   \[ \]

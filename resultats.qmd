@@ -1,8 +1,6 @@
 # Résultats
 
-Ils comportent les éléments qui permettent d'apprécier si la démarche, la méthode, etc… sont
-utilisables, généralisables ….
-
+Ils comportent les éléments qui permettent d'apprécier si la démarche, la méthode, etc... sont utilisables, généralisables ....
 
 This is a Quarto book.
 
@@ -14,24 +12,29 @@ To learn more about Quarto books visit <https://quarto.org/docs/books>.
 ```
 
 ![Chart Bar des NAS](figures/bar_classify_Del_29_04_22_17h.png)
+```{r}
+#| label: fig-mtcars
+#| fig-cap: "MPG horsepower, colore by trans"
+#| echo: true
 
+library(ggplot2)
 
-<!-- # ```{r} -->
-<!-- # #| label: fig-mtcars -->
-<!-- # #| fig-cap: "MPG vs horsepower, colored by transmission." -->
-<!-- # #| echo: true -->
-<!-- #  -->
-<!-- # library(ggplot2) -->
-<!-- # mtcars2 <- mtcars -->
-<!-- # mtcars2$am <- factor( -->
-<!-- #   mtcars$am, labels = c('automatic', 'manual') -->
-<!-- # ) -->
-<!-- # ggplot(mtcars2, aes(hp, mpg, color = am)) + -->
-<!-- #   geom_point() +  geom_smooth(formula = y ~ x, method = "loess") + -->
-<!-- #   theme(legend.position = 'bottom') -->
-<!-- # ``` -->
+mtcars2 <- mtcars
+
+mtcars2$am <- factor(
+  mtcars$am, 
+  labels = c("automatic", "manual"))
+
+ggplot(mtcars2, aes(hp, mpg, color = am)) +
+  geom_point() + geom_smooth(formula = y ~ x, 
+                             method = "loess") +
+  theme(legend.position = "bottom")
+
+```
+
 
 Voici un graphique produir avec `R` et dot on peut lire le (court) script
+
 ```{r}
 #| echo: true
 #| layout-ncol: 2
@@ -44,35 +47,3 @@ plot(pressure)
 ```
 
 
-
-
-Ceci est un exemple de diagramme écrit en `mermaid`
-```{mermaid}
-%%| echo: true
-
-flowchart LR
-  A[Hard edge] --> B(Round edge)
-  B --> C{Decision}
-  C --> D[Result one]
-  C --> E[Result two]
-```
-
-
-
-Un autre exemple de diagramme
-```{mermaid}
-%%| echo: true
-%%| fig-cap: mermaid diagram
-
-sequenceDiagram
-  participant Alice
-  participant Bob
-  Alice->>John: Hello John, how are you?
-  loop Healthcheck
-    John->>John: Fight against hypochondria
-  end
-  Note right of John: Rational thoughts <br/>prevail!
-  John-->>Alice: Great!
-  John->>Bob: How about you?
-  Bob-->>John: Jolly good!
-```

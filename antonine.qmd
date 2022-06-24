@@ -18,25 +18,19 @@ Les deux modes de représentations font appels à des enjeux différents (ainsi 
 -   Voir Lena Sanders : modèle LOgit pour explorer la significativité ou non du univ_field
 -   Quelle pondération de polygones lorsqu'ils se superposent, lorsqu'ils n'ont pas la même taille mais décrivent des ensembles similaires (pays) ou lorsqu'il sont multi-polygones donc séparés et parfois se recouvrent
 -   Comment analyser les aires disjointes ou emboîtées ?
--   
 
 ## Analyse du besoin en amont ?
 
 ## Livrables
 
 -   Quels sont les produits à réalisés et à qui s'adressent-ils ?
-  -   Priorité sur les **géométries** et leur enjeux :
-  -   plusieurs dessins sont autorisées
-
+-   Priorité sur les **géométries** et leur enjeux :
+-   plusieurs dessins sont autorisées
 -   plusieurs modes de saisi sont possibles chacun avec leur biais
-
 -   Plusieurs problèmes en découlent
-
--   
-  -   Base de donnée Géo et Respondent avec documents de présentation
+-   Base de donnée Géo et Respondent avec documents de présentation
 -   explorations de la BDG :
-  -   Visualisations exploratoires et travail de représentation pour le diagnostic (explorer les chorèmes pour proposer une typologie des polygones et relations rencontrées dans la BDG)
-
+-   Visualisations exploratoires et travail de représentation pour le diagnostic (explorer les chorèmes pour proposer une typologie des polygones et relations rencontrées dans la BDG)
 -   Visualisations finales / exploratoires en tant de résultats de l'exploration : on parle de représentations visant à proposer certaines interprétations des résultats (sous formes de prototypes car la valorisation finale est attendue en dehors du cadre du stage)
 
 ## GIT
@@ -50,6 +44,105 @@ Les deux modes de représentations font appels à des enjeux différents (ainsi 
 Ici discuter des apports du stage dans le domaine de la gestion de projet et de la mise en place d'un workshop. - Dans quelle mesure suis-je force de proposition - Quel suivi, même informel est mis ou ai-je mis en place ? Finalement le suivi est assez souple, je suis libre de faire ce que je veux mais le cadre est bien posé et les objectifs déterminés. Par exemple, j'ai été accompagnée dans la découverte de la BD e des premiers scripts exploratoires, j'ai eu comme objectif de réaliser un document de présentation de cette base de donnée et des traitements qui y ont été réalisés pour la rendre propre ou qui peuvent être réalisés dessus en guise d'exploration. J'ai le champ libre pour la réalisation de ce document concernant à la fois les outils que j'utilise et ce que j'y met. Je reste encadrée lorsque j'ai des questions et ait besoin d'être recadrée.
 
 -   Mettre ne avant l'informel : les formations et les autres projets/ présentations auxquelles j'ai été invitées à participer
-
 -   Parler des compétences acquises en matière de logiciels/ technique (quarto, redaction latex/yaml, regex, git )
+
+
+## Traitement de la base de donnée "géométries"
+
+Possibilité de créer un package pour exploiter les données.  
+Pour produire des tableaux à la volée (BDG & BDR) et les gaphiques, cartes, statistiques qui en découlent. 
+Ce travail necessite l'identification précise de productions pour chacun de ces volets (quels graphiques sur quelles données, etc). 
+
+### Géométries et leur classification : pistes
+- Comparer la superficie du polygone avec la superficie réelle de l'espace décrit (notamment lorsque le mot attribué correspond à cet espace). 
+- Quel ordre des polygones pour un meme mot donnée
+- Justifier l'usage des menus e leur pertinences vis à vis d'une approche automatisée.
+    - Geom repair : intersection 
+    - txt move/add : au cas ou mais tres peu utilisé finalement 
+    - Typologie : difficle de faire une typologie automatisée (on peut imaginer un scale comme etant une hierarchie des superficie lorsqu'elles sont contenues les unes dans les autres à x%, mais le multi unique et le overlap sont plus complexes car relevent d'une appréciation de l'intention du dessinateur (l'intersection partielle de deux ensemble peut etre due à une imprecision comme à une volonté du dessinateur))
+
+### La visualisation pour exploration 
+
+***Décrire la méthode d'affichage et de classificationd es polygones puis exposer les problèmes***
+***Présenter les problèmes de géométrie sous forme de shémas / chorème ?***
+
+
+Problème sémiolgiques pour juger rapidement et efficacement dans un premier temps du polygone, puis dans un second temps des choix fait sur ce/ces polygones (controle). 
+
+Le choix du fond de carte et de sa généralisation posent des enjeux concernant d'une part les polygones décrivant des territoires insulaires qui n'apparaissent pas et d'autre part des polygones décrivant des petits territoires type villes dont on ne peut distinguer les contours.   
+
+Dans le premier cas, on visualise un polygone dans un océan sans repères autour (pas d'iles), on peut estimer la justesse du dessin grace aux informations récupérées directement du répondant (le mot associé ou son université d'appartenance surtout) ainsi que par les autres polygones dessinée (lorsqu'il y en a). Surtout ce problème est corrigé en choisissant une echelle de représentation plus fine pour le fond de carte.  
+
+Dans le second cas le problème est plus délicat. Il ne s'agit pas d'une niveau de détail du à la généralisation mais à des limites adminstratives ou de toponymes présents ou non pour aider à reconaitre le lieu décrit par le polygone Dans ce cas, choisir un fond de carte plus riche pose d'abord la contrainte de l'alourdissement de la représentation, de la saturation de l'espace visuel au détriment du jugement du polygone (qui est l'objet premier necessitant toute l'attention du visualisateur). Cette option améliore la reconnaissance du lieu décrit par le polygone mais pas à tous les coups. Il peut encore etre necessaire, lorsque la région n'est pas connue, ou encore trop petite de "dézoomer".  
+L'alternative retenue (dans un premier temps) à été de quitter la boucle d'affichage et de passer par une cartographie interactive des tous les polygones d'un répondant sur une meme carte. Ici le fond de carte est produit par Open Street Map et la généralisation des toponymes et des limites administratives des pays se faut automatique selon le zoom répondant de façon interactive. Ici encore les informations additionnelles données par le répondant sont accessibles pour chacun des polygones via une infobulle générée au clic. 
+
+Une autre alternative eu été de directement représenter les polygones via cette carte interactive au sein meme de la boucle.  
+Cette option n'a pas encore été explorée. 
+
+
+### Garder ou non les polygones
+- Quel choix pour les polygones trop petits : au dessus du quartier ; robleme lors de la représentation (un carreau entier selon la résolution pou une surface potentiellement plus petite que ce carreau)masi ne peut pas etre le seul argument... consider-t-on que quelqu'un entourant "sa maison" répond bien à la question "qu'elle est la zone d'appartenance de votre pays ?". On peut se demadner si la façon dont est posé la question induit cette réponse et donc si elle doit etre disqualiiée ou non. 
+
+
+- Probleme pour les polygones multi-unique et scale, ainsi que over et scale (lorsque les polyhones répondent à plusieurs logiques d'appartenance)
+
+- Pour les polygones "world" et leur probleme de plot peut-on tous les remplacer par un polygone type ? (plutot non)
+
+## L'outil : Maptionnaire 
+### Les biais 
+
+#### Systèmes d'exploitation et navigateurs internet pris en charge
+
+>**Does Maptionnaire have any system or browser requirements?**
+    Maptionnaire uses commercially reasonable efforts to support the two most recent major versions of operating systems with significant market share (>1%) running up-to-date versions of browsers with significant market share (>1%). 
+    
+    As of November 9, 2021, the supported operating systems and versions for respondents are:
+        - Windows (11, 10)
+        - macOS (12, 11)
+        - Android (12, 11)
+        - iOS/iPadOS (15, 14)
+    
+    The supported browsers are Chrome, Safari, Firefox, Samsung Internet, Edge, and Opera. 
+    For optimal performance, please remember to make sure that you have the latest browser version.  
+    If you are part of a team using Maptionnaire to create questionnaires and other content, we recommend that you use the latest version of Chrome. 
+
+Windows 10 : 2014
+Windows 11 : 2021
+macOS 11 : 2020
+macOS 12 : 2021
+Android 11 : 2020
+Android 12 : 2022
+iOS/iPadOS 14 : 2020
+iOS/iPadOS 15 : 2021
+
+
+==> Probleme de compatibilité peut etres avec certains parcs informatiques/technologiques possiblement controlable avec des données économiques et de part de marché pour chaque pays. 
+
+Test de l'application evisageable sur des sites de developpemetn web type "browserStack".
+ 
+### Les questions 
+**DROM**  
+On peut supposer que la surreprésenation des droms dans les polygones des français metropolitains est due à la récurrence du terme "DROM" tout au long du questionnaire 
+
+**Polygones**
+La question n'est pas exactement traduite correctement dans chaque langue. Des mot ont été ajouté en allemand par exemple. D'autre part les termes "pays" et "limites" posent des problème d'interprésation (pays = country = campagne ??? - limite = frontiere ???)
+
+
+
+## Exploitation de la Base de donnée "Réponses"
+
+- Explo des données manquantes : VIM ? 
+    - distribution des VM  (dispositifs et mécanismes)
+    - CAH ou autre pour établir une typologie des NA (profils des répondants)
+- Objectifs de l'enquetes en termes d'effectifs : 
+    - 5 pays : Tunisie, Turquie, France, Allemagne, Irelande
+    - 3 Villes par Pays
+    - 240 etudiants par ville
+    - 40 etudiants par discipline
+
+## EuroBroadMap 
+Les reusltats europe sont tres normées, voir prévisibles, tandis que d'autres pays adoptent un regard plus critique vis à vis de l'europe. 
+- Chine  mode, luxe, sp
+Afrique : tunisie et senegal : crique sur le racisme / inegalité / colonialisme
+Bresil : 
 
