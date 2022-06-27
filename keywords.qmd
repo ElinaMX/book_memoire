@@ -1,0 +1,7 @@
+- paradonnées
+- metadonnées
+- reproductibilité
+- base de donnée
+- géomatique
+- programmation lettrée
+- 

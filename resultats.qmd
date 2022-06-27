@@ -1,13 +1,7 @@
 # Résultats
 
-<<<<<<< HEAD
-
-Ils comportent les éléments qui permettent d'apprécier si la démarche, la méthode, etc… sont
-utilisables, généralisables ….
-
-=======
 Ils comportent les éléments qui permettent d'apprécier si la démarche, la méthode, etc... sont utilisables, généralisables ....
->>>>>>> 37938743ad31b6ae5e44800f23479de21a96e8bb
+
 
 This is a Quarto book.
 
@@ -18,15 +12,15 @@ To learn more about Quarto books visit <https://quarto.org/docs/books>.
 1 + 1
 ```
 
+Voici un graphique produit avec `R` et dont on peut lire le (court) script
 ![Chart Bar des NAS](figures/bar_classify_Del_29_04_22_17h.png)
 ```{r}
 #| label: fig-mtcars
 #| fig-cap: "MPG horsepower, colore by trans"
 #| echo: true
 
-<<<<<<< HEAD
-Voici un graphique produit avec `R` et dot on peut lire le (court) script
-=======
+
+
 library(ggplot2)
 
 mtcars2 <- mtcars
@@ -45,7 +39,7 @@ ggplot(mtcars2, aes(hp, mpg, color = am)) +
 
 Voici un graphique produir avec `R` et dot on peut lire le (court) script
 
->>>>>>> 37938743ad31b6ae5e44800f23479de21a96e8bb
+
 ```{r}
 #| echo: true
 #| layout-ncol: 2
@@ -57,7 +51,7 @@ plot(cars)
 plot(pressure)
 ```
 
-<<<<<<< HEAD
+
 Ceci est un exemple de diagramme écrit en `mermaid`
 ```{mermaid}
 %%| echo: true
@@ -108,6 +102,4 @@ ggplot(penguins,
   ) +
   theme_minimal()
 ```
-=======
 
->>>>>>> 37938743ad31b6ae5e44800f23479de21a96e8bb
