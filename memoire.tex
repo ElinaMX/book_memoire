@@ -160,9 +160,6 @@
 \makeatletter
 \makeatother
 \makeatletter
-\@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
-\makeatother
-\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
@@ -234,7 +231,11 @@ Résumé du stage (dont le sujet) en 10 lignes en français et en anglais.
 Informatif et concis, ce résumé doit refléter l'esprit du document, définir les buts et les méthodes,
 les résultats et les conclusions. Il se présente sous la forme d'un paragraphe unique, sans alinéa.
 
+<<<<<<< HEAD
 \ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, enhanced, interior hidden, breakable, sharp corners, frame hidden]}{\end{tcolorbox}}\fi
+=======
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, frame hidden, enhanced, interior hidden, sharp corners, breakable]}{\end{tcolorbox}}\fi
+>>>>>>> 37938743ad31b6ae5e44800f23479de21a96e8bb
 
 \renewcommand*\contentsname{Table des matières}
 {
@@ -242,8 +243,6 @@ les résultats et les conclusions. Il se présente sous la forme d'un paragraphe
 \tableofcontents
 }
 \mainmatter
-\bookmarksetup{startatroot}
-
 \hypertarget{introduction}{%
 \chapter{Introduction}\label{introduction}}
 
@@ -252,8 +251,6 @@ projet : pour un public particulier ? Une nouvelle méthodologie ? Une
 monographie sur un espace donné ? Durée. Un rapport orienté « recherche
 » développera la problématique qui sous-tend le questionnement de
 recherche et formulera, le cas échéant, les hypothèses de travail.
-
-\bookmarksetup{startatroot}
 
 \hypertarget{notes-rendez-vous-antoine}{%
 \chapter{Notes rendez-vous Antoine}\label{notes-rendez-vous-antoine}}
@@ -302,7 +299,6 @@ Les deux modes de représentations font appels à des enjeux différents
   recouvrent
 \item
   Comment analyser les aires disjointes ou emboîtées ?
-\item
 \end{itemize}
 
 \hypertarget{analyse-du-besoin-en-amont}{%
@@ -313,6 +309,7 @@ Les deux modes de représentations font appels à des enjeux différents
 \section{Livrables}\label{livrables}}
 
 \begin{itemize}
+\tightlist
 \item
   Quels sont les produits à réalisés et à qui s'adressent-ils ?
 \item
@@ -323,7 +320,6 @@ Les deux modes de représentations font appels à des enjeux différents
   plusieurs modes de saisi sont possibles chacun avec leur biais
 \item
   Plusieurs problèmes en découlent
-\item
 \item
   Base de donnée Géo et Respondent avec documents de présentation
 \item
@@ -374,6 +370,7 @@ et ce que j'y met. Je reste encadrée lorsque j'ai des questions et ait
 besoin d'être recadrée.
 
 \begin{itemize}
+\tightlist
 \item
   Mettre ne avant l'informel : les formations et les autres projets/
   présentations auxquelles j'ai été invitées à participer
@@ -382,7 +379,216 @@ besoin d'être recadrée.
   (quarto, redaction latex/yaml, regex, git )
 \end{itemize}
 
-\bookmarksetup{startatroot}
+\hypertarget{traitement-de-la-base-de-donnuxe9e-guxe9omuxe9tries}{%
+\section{Traitement de la base de donnée
+``géométries''}\label{traitement-de-la-base-de-donnuxe9e-guxe9omuxe9tries}}
+
+Possibilité de créer un package pour exploiter les données.\\
+Pour produire des tableaux à la volée (BDG \& BDR) et les gaphiques,
+cartes, statistiques qui en découlent. Ce travail necessite
+l'identification précise de productions pour chacun de ces volets (quels
+graphiques sur quelles données, etc).
+
+\hypertarget{guxe9omuxe9tries-et-leur-classification-pistes}{%
+\subsection{Géométries et leur classification :
+pistes}\label{guxe9omuxe9tries-et-leur-classification-pistes}}
+
+\begin{itemize}
+\tightlist
+\item
+  Comparer la superficie du polygone avec la superficie réelle de
+  l'espace décrit (notamment lorsque le mot attribué correspond à cet
+  espace).
+\item
+  Quel ordre des polygones pour un meme mot donnée
+\item
+  Justifier l'usage des menus e leur pertinences vis à vis d'une
+  approche automatisée.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Geom repair : intersection
+  \item
+    txt move/add : au cas ou mais tres peu utilisé finalement
+  \item
+    Typologie : difficle de faire une typologie automatisée (on peut
+    imaginer un scale comme etant une hierarchie des superficie
+    lorsqu'elles sont contenues les unes dans les autres à x\%, mais le
+    multi unique et le overlap sont plus complexes car relevent d'une
+    appréciation de l'intention du dessinateur (l'intersection partielle
+    de deux ensemble peut etre due à une imprecision comme à une volonté
+    du dessinateur))
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{la-visualisation-pour-exploration}{%
+\subsection{La visualisation pour
+exploration}\label{la-visualisation-pour-exploration}}
+
+\textbf{\emph{Décrire la méthode d'affichage et de classificationd es
+polygones puis exposer les problèmes}} \textbf{\emph{Présenter les
+problèmes de géométrie sous forme de shémas / chorème ?}}
+
+Problème sémiolgiques pour juger rapidement et efficacement dans un
+premier temps du polygone, puis dans un second temps des choix fait sur
+ce/ces polygones (controle).
+
+Le choix du fond de carte et de sa généralisation posent des enjeux
+concernant d'une part les polygones décrivant des territoires insulaires
+qui n'apparaissent pas et d'autre part des polygones décrivant des
+petits territoires type villes dont on ne peut distinguer les contours.
+
+Dans le premier cas, on visualise un polygone dans un océan sans repères
+autour (pas d'iles), on peut estimer la justesse du dessin grace aux
+informations récupérées directement du répondant (le mot associé ou son
+université d'appartenance surtout) ainsi que par les autres polygones
+dessinée (lorsqu'il y en a). Surtout ce problème est corrigé en
+choisissant une echelle de représentation plus fine pour le fond de
+carte.
+
+Dans le second cas le problème est plus délicat. Il ne s'agit pas d'une
+niveau de détail du à la généralisation mais à des limites
+adminstratives ou de toponymes présents ou non pour aider à reconaitre
+le lieu décrit par le polygone Dans ce cas, choisir un fond de carte
+plus riche pose d'abord la contrainte de l'alourdissement de la
+représentation, de la saturation de l'espace visuel au détriment du
+jugement du polygone (qui est l'objet premier necessitant toute
+l'attention du visualisateur). Cette option améliore la reconnaissance
+du lieu décrit par le polygone mais pas à tous les coups. Il peut encore
+etre necessaire, lorsque la région n'est pas connue, ou encore trop
+petite de ``dézoomer''.\\
+L'alternative retenue (dans un premier temps) à été de quitter la boucle
+d'affichage et de passer par une cartographie interactive des tous les
+polygones d'un répondant sur une meme carte. Ici le fond de carte est
+produit par Open Street Map et la généralisation des toponymes et des
+limites administratives des pays se faut automatique selon le zoom
+répondant de façon interactive. Ici encore les informations
+additionnelles données par le répondant sont accessibles pour chacun des
+polygones via une infobulle générée au clic.
+
+Une autre alternative eu été de directement représenter les polygones
+via cette carte interactive au sein meme de la boucle.\\
+Cette option n'a pas encore été explorée.
+
+\hypertarget{garder-ou-non-les-polygones}{%
+\subsection{Garder ou non les
+polygones}\label{garder-ou-non-les-polygones}}
+
+\begin{itemize}
+\item
+  Quel choix pour les polygones trop petits : au dessus du quartier ;
+  robleme lors de la représentation (un carreau entier selon la
+  résolution pou une surface potentiellement plus petite que ce
+  carreau)masi ne peut pas etre le seul argument\ldots{} consider-t-on
+  que quelqu'un entourant ``sa maison'' répond bien à la question
+  ``qu'elle est la zone d'appartenance de votre pays ?''. On peut se
+  demadner si la façon dont est posé la question induit cette réponse et
+  donc si elle doit etre disqualiiée ou non.
+\item
+  Probleme pour les polygones multi-unique et scale, ainsi que over et
+  scale (lorsque les polyhones répondent à plusieurs logiques
+  d'appartenance)
+\item
+  Pour les polygones ``world'' et leur probleme de plot peut-on tous les
+  remplacer par un polygone type ? (plutot non)
+\end{itemize}
+
+\hypertarget{loutil-maptionnaire}{%
+\section{L'outil : Maptionnaire}\label{loutil-maptionnaire}}
+
+\hypertarget{les-biais}{%
+\subsection{Les biais}\label{les-biais}}
+
+\hypertarget{systuxe8mes-dexploitation-et-navigateurs-internet-pris-en-charge}{%
+\subsubsection{Systèmes d'exploitation et navigateurs internet pris en
+charge}\label{systuxe8mes-dexploitation-et-navigateurs-internet-pris-en-charge}}
+
+\begin{quote}
+\textbf{Does Maptionnaire have any system or browser requirements?}
+Maptionnaire uses commercially reasonable efforts to support the two
+most recent major versions of operating systems with significant market
+share (\textgreater1\%) running up-to-date versions of browsers with
+significant market share (\textgreater1\%).
+\end{quote}
+
+\begin{verbatim}
+As of November 9, 2021, the supported operating systems and versions for respondents are:
+    - Windows (11, 10)
+    - macOS (12, 11)
+    - Android (12, 11)
+    - iOS/iPadOS (15, 14)
+
+The supported browsers are Chrome, Safari, Firefox, Samsung Internet, Edge, and Opera. 
+For optimal performance, please remember to make sure that you have the latest browser version.  
+If you are part of a team using Maptionnaire to create questionnaires and other content, we recommend that you use the latest version of Chrome. 
+\end{verbatim}
+
+Windows 10 : 2014 Windows 11 : 2021 macOS 11 : 2020 macOS 12 : 2021
+Android 11 : 2020 Android 12 : 2022 iOS/iPadOS 14 : 2020 iOS/iPadOS 15 :
+2021
+
+==\textgreater{} Probleme de compatibilité peut etres avec certains
+parcs informatiques/technologiques possiblement controlable avec des
+données économiques et de part de marché pour chaque pays.
+
+Test de l'application evisageable sur des sites de developpemetn web
+type ``browserStack''.
+
+\hypertarget{les-questions}{%
+\subsection{Les questions}\label{les-questions}}
+
+\textbf{DROM}\\
+On peut supposer que la surreprésenation des droms dans les polygones
+des français metropolitains est due à la récurrence du terme ``DROM''
+tout au long du questionnaire
+
+\textbf{Polygones} La question n'est pas exactement traduite
+correctement dans chaque langue. Des mot ont été ajouté en allemand par
+exemple. D'autre part les termes ``pays'' et ``limites'' posent des
+problème d'interprésation (pays = country = campagne ??? - limite =
+frontiere ???)
+
+\hypertarget{exploitation-de-la-base-de-donnuxe9e-ruxe9ponses}{%
+\section{Exploitation de la Base de donnée
+``Réponses''}\label{exploitation-de-la-base-de-donnuxe9e-ruxe9ponses}}
+
+\begin{itemize}
+\tightlist
+\item
+  Explo des données manquantes : VIM ?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    distribution des VM (dispositifs et mécanismes)
+  \item
+    CAH ou autre pour établir une typologie des NA (profils des
+    répondants)
+  \end{itemize}
+\item
+  Objectifs de l'enquetes en termes d'effectifs :
+
+  \begin{itemize}
+  \tightlist
+  \item
+    5 pays : Tunisie, Turquie, France, Allemagne, Irelande
+  \item
+    3 Villes par Pays
+  \item
+    240 etudiants par ville
+  \item
+    40 etudiants par discipline
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{eurobroadmap}{%
+\section{EuroBroadMap}\label{eurobroadmap}}
+
+Les reusltats europe sont tres normées, voir prévisibles, tandis que
+d'autres pays adoptent un regard plus critique vis à vis de l'europe. -
+Chine mode, luxe, sp Afrique : tunisie et senegal : crique sur le
+racisme / inegalité / colonialisme Bresil :
 
 \hypertarget{contenu-central-du-rapport}{%
 \chapter{Contenu central du rapport}\label{contenu-central-du-rapport}}
@@ -413,43 +619,33 @@ références bibliographiques.
   fait, comment je l'adapte à mon travail etc
 \item
   Deux options pour le plan :
-
-  \begin{itemize}
-  \item
-    Classique : 3 parties reprenant chacune tous les objectifs / sous
-    projets
-
-    \begin{itemize}
-    \tightlist
-    \item
-      Contexte (structure, projet, enjeux du projet, comment le stage
-      s'insère dans le projet, quels acteurs sont rencontrés et quels
-      sont leurs rôles)
-    \end{itemize}
-  \end{itemize}
 \item
-  Méthodologie mise en place
-\item
-  Résultats avec mise en perspective, retour sur le travail effectué
+  Classique : 3 parties reprenant chacune tous les objectifs / sous
+  projets - Contexte (structure, projet, enjeux du projet, comment le
+  stage s'insère dans le projet, quels acteurs sont rencontrés et quels
+  sont leurs rôles)
+\end{itemize}
+
+\begin{verbatim}
+-   Méthodologie mise en place
+-   Résultats avec mise en perspective, retour sur le travail effectué
+\end{verbatim}
+
+\begin{itemize}
 \item
   ou alors Une partie par projet / Objectif reprenant chacune les
   parties précédemment décrites
 \item
-  1 : exploration BDR :
+  1 : exploration BDR : - Contexte/méthodologie/résultats
 \item
-  Contexte/méthodologie/résultats
-\item
-  2 : Exploration des géométries
-\item
-  Contexte/méthodologie/résultats
+  2 : Exploration des géométries - Contexte/méthodologie/résultats
 \item
   Bien mettre en avant ce que j'ai découvert, ce que j'ai
   \textbf{proposé} les difficultés rencontrées et les problèmes soulevés
   même s'ils n'ont pas été résolus
 \item
   \textbf{OBJECTIFS} : reproductibilité, analyse, mise à disposition des
-  données (et proposition d'exploitation de ces données)
-\item
+  données (et proposition d'exploitation de ces données
 \end{itemize}
 
 \hypertarget{mise-en-page}{%
@@ -479,8 +675,6 @@ références bibliographiques.
 \item[$\square$]
   parametre footnotes
 \end{itemize}
-
-\bookmarksetup{startatroot}
 
 \hypertarget{ruxe9sultats}{%
 \chapter{Résultats}\label{ruxe9sultats}}
@@ -513,12 +707,44 @@ To learn more about Quarto books visit
 
 \end{figure}
 
+<<<<<<< HEAD
 Voici un graphique produit avec \texttt{R} et dot on peut lire le
+=======
+\begin{Shaded}
+\begin{Highlighting}[numbers=left,,]
+\FunctionTok{library}\NormalTok{(ggplot2)}
+
+\NormalTok{mtcars2 }\OtherTok{\textless{}{-}}\NormalTok{ mtcars}
+
+\NormalTok{mtcars2}\SpecialCharTok{$}\NormalTok{am }\OtherTok{\textless{}{-}} \FunctionTok{factor}\NormalTok{(}
+\NormalTok{  mtcars}\SpecialCharTok{$}\NormalTok{am, }
+  \AttributeTok{labels =} \FunctionTok{c}\NormalTok{(}\StringTok{"automatic"}\NormalTok{, }\StringTok{"manual"}\NormalTok{))}
+
+\FunctionTok{ggplot}\NormalTok{(mtcars2, }\FunctionTok{aes}\NormalTok{(hp, mpg, }\AttributeTok{color =}\NormalTok{ am)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_point}\NormalTok{() }\SpecialCharTok{+} \FunctionTok{geom\_smooth}\NormalTok{(}\AttributeTok{formula =}\NormalTok{ y }\SpecialCharTok{\textasciitilde{}}\NormalTok{ x, }
+                             \AttributeTok{method =} \StringTok{"loess"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{legend.position =} \StringTok{"bottom"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}[H]
+
+{\centering \includegraphics{./resultats_files/figure-pdf/fig-mtcars-1.pdf}
+
+}
+
+\caption{\label{fig-mtcars}MPG horsepower, colore by trans}
+
+\end{figure}
+
+Voici un graphique produir avec \texttt{R} et dot on peut lire le
+>>>>>>> 37938743ad31b6ae5e44800f23479de21a96e8bb
 (court) script
 
 \begin{Shaded}
 \begin{Highlighting}[numbers=left,,]
 \FunctionTok{plot}\NormalTok{(cars)}
+
 \FunctionTok{plot}\NormalTok{(pressure)}
 \end{Highlighting}
 \end{Shaded}
@@ -531,7 +757,7 @@ Voici un graphique produit avec \texttt{R} et dot on peut lire le
 
 \raisebox{-\height}{
 
-\includegraphics{./resultats_files/figure-pdf/unnamed-chunk-1-1.pdf}
+\includegraphics{./resultats_files/figure-pdf/unnamed-chunk-2-1.pdf}
 
 }
 
@@ -547,7 +773,7 @@ Voici un graphique produit avec \texttt{R} et dot on peut lire le
 
 \raisebox{-\height}{
 
-\includegraphics{./resultats_files/figure-pdf/unnamed-chunk-1-2.pdf}
+\includegraphics{./resultats_files/figure-pdf/unnamed-chunk-2-2.pdf}
 
 }
 
@@ -559,6 +785,7 @@ Voici un graphique produit avec \texttt{R} et dot on peut lire le
 
 \end{figure}
 
+<<<<<<< HEAD
 Ceci est un exemple de diagramme écrit en \texttt{mermaid}
 
 \begin{Shaded}
@@ -628,6 +855,8 @@ bill lengths of these penguins.
 
 \bookmarksetup{startatroot}
 
+=======
+>>>>>>> 37938743ad31b6ae5e44800f23479de21a96e8bb
 \hypertarget{conclusion}{%
 \chapter{Conclusion}\label{conclusion}}
 
@@ -635,12 +864,8 @@ Dans quelles conditions peut-on la généraliser ? Quelles réponses ont
 été données ? Quelles sont celles qui ne l'ont pas été ? Que faut-il
 envisager pour l'avenir ?
 
-\bookmarksetup{startatroot}
-
 \hypertarget{remerciements-uxe9ventuels}{%
 \chapter{Remerciements éventuels}\label{remerciements-uxe9ventuels}}
-
-\bookmarksetup{startatroot}
 
 \hypertarget{references}{%
 \chapter*{References}\label{references}}

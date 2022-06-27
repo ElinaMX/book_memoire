@@ -2,60 +2,131 @@
 
 Il comporte deux ou trois parties (1, 2, 3) subdivisées en deux ou trois sous parties ( 1.1, 1.2, 1.3) tout au plus. En lisant les titres des 4 à 9 sous parties, on doit pouvoir se faire une idée du contenu et de la démarche de l'étude. Le texte est fait pour être lu par une personne qui n'a pas suivi le travail du stagiaire. Un rapport orienté « recherche » intégrera obligatoirement une partie « état de l'art » et valorisera les références bibliographiques.
 
+<<<<<<< HEAD
 
 ## La forme du mémoire
+=======
+>>>>>>> 37938743ad31b6ae5e44800f23479de21a96e8bb
 
--   utiliser souvent les illustrations et les graphiques, notamment pour les chaines de traitement et l'organisation. il est important que le mémoire reste lisible et très rapidement compréhensible.
+## Traitement de la base de donnée "géométries"
 
--   **Etat de l'art** : Surtout un état de l'existant notamment en matière d'outils et de méthodologie. Le stage reste un stage ingénieur, et non pas de recherche. Il faut mettre en avant ce qui a déjà été produit en terme technique (exemple : si je rencontre un problème, la solution existe probablement déjà, il faut alors que je fasse été de cette ou ces solutions et que je discute de ce que j'en fait, comment je l'adapte à mon travail etc
+Possibilité de créer un package pour exploiter les données.  
+Pour produire des tableaux à la volée (BDG & BDR) et les gaphiques, cartes, statistiques qui en découlent. 
+Ce travail necessite l'identification précise de productions pour chacun de ces volets (quels graphiques sur quelles données, etc). 
 
--   Deux options pour le plan :
+### Géométries et leur classification : enjeux méthodologiques
+- Comparer la superficie du polygone avec la superficie réelle de l'espace décrit (notamment lorsque le mot attribué correspond à cet espace). 
+- Quel ordre des polygones pour un meme mot donnée
+- Justifier l'interet de juger à l'oeil (controle humain face à la redondance de la tache). 
+- Justifier l'usage des menus e leur pertinences vis à vis d'une approche automatisée (identifier les actions automatisables)
+    - Geom repair : intersection 
+    - txt move/add : au cas ou mais tres peu utilisé finalement 
+    - Typologie : difficle de faire une typologie automatisée (on peut imaginer un scale comme etant une hierarchie des superficie lorsqu'elles sont contenues les unes dans les autres à x%, mais le multi unique et le overlap sont plus complexes car relevent d'une appréciation de l'intention du dessinateur (l'intersection partielle de deux ensemble peut etre due à une imprecision comme à une volonté du dessinateur))
+    
+Il reste de nombreuses actons répétitives voire inutiles dans la boucles.
 
-    -   Classique : 3 parties reprenant chacune tous les objectifs / sous projets
+On peut envisager une comparaison des résultats automatisés et manuels
 
-        -   Contexte (structure, projet, enjeux du projet, comment le stage s'insère dans le projet, quels acteurs sont rencontrés et quels sont leurs rôles)
+Classification manuelle supervisée (à deux ou trois) pourquoi ? quelle utilité, comment s'organise-t-on pour controler les réponses et les standardiser ? 
 
--   Méthodologie mise en place
+### La visualisation pour exploration 
 
--   Résultats avec mise en perspective, retour sur le travail effectué
+***Décrire la méthode d'affichage et de classificationd es polygones puis exposer les problèmes***
+***Présenter les problèmes de géométrie sous forme de shémas / chorème ?***
 
--   ou alors Une partie par projet / Objectif reprenant chacune les parties précédemment décrites
 
--   1 : exploration BDR :
+Problème sémiolgiques pour juger rapidement et efficacement dans un premier temps du polygone, puis dans un second temps des choix fait sur ce/ces polygones (controle). 
 
--   Contexte/méthodologie/résultats
+Le choix du fond de carte et de sa généralisation posent des enjeux concernant d'une part les polygones décrivant des territoires insulaires qui n'apparaissent pas et d'autre part des polygones décrivant des petits territoires type villes dont on ne peut distinguer les contours.   
 
--   2 : Exploration des géométries
+Dans le premier cas, on visualise un polygone dans un océan sans repères autour (pas d'iles), on peut estimer la justesse du dessin grace aux informations récupérées directement du répondant (le mot associé ou son université d'appartenance surtout) ainsi que par les autres polygones dessinée (lorsqu'il y en a). Surtout ce problème est corrigé en choisissant une echelle de représentation plus fine pour le fond de carte.  
 
--   Contexte/méthodologie/résultats
+Dans le second cas le problème est plus délicat. Il ne s'agit pas d'une niveau de détail du à la généralisation mais à des limites adminstratives ou de toponymes présents ou non pour aider à reconaitre le lieu décrit par le polygone Dans ce cas, choisir un fond de carte plus riche pose d'abord la contrainte de l'alourdissement de la représentation, de la saturation de l'espace visuel au détriment du jugement du polygone (qui est l'objet premier necessitant toute l'attention du visualisateur). Cette option améliore la reconnaissance du lieu décrit par le polygone mais pas à tous les coups. Il peut encore etre necessaire, lorsque la région n'est pas connue, ou encore trop petite de "dézoomer".  
+L'alternative retenue (dans un premier temps) à été de quitter la boucle d'affichage et de passer par une cartographie interactive des tous les polygones d'un répondant sur une meme carte. Ici le fond de carte est produit par Open Street Map et la généralisation des toponymes et des limites administratives des pays se faut automatique selon le zoom répondant de façon interactive. Ici encore les informations additionnelles données par le répondant sont accessibles pour chacun des polygones via une infobulle générée au clic. 
 
--   Bien mettre en avant ce que j'ai découvert, ce que j'ai **proposé** les difficultés rencontrées et les problèmes soulevés même s'ils n'ont pas été résolus
+Une autre alternative eu été de directement représenter les polygones via cette carte interactive au sein meme de la boucle.  
+Cette option n'a pas encore été explorée. 
 
--   **OBJECTIFS** : reproductibilité, analyse, mise à disposition des données (et proposition d'exploitation de ces données)
 
--   
 
-## Mise en page
+### Garder ou non les polygones
+- Quel choix pour les polygones trop petits : au dessus du quartier ; robleme lors de la représentation (un carreau entier selon la résolution pou une surface potentiellement plus petite que ce carreau)masi ne peut pas etre le seul argument... consider-t-on que quelqu'un entourant "sa maison" répond bien à la question "qu'elle est la zone d'appartenance de votre pays ?". On peut se demadner si la façon dont est posé la question induit cette réponse et donc si elle doit etre disqualiiée ou non. 
 
--   [ ] Police taille 11 / 12
 
--   [ ] Interligne : 1.5
+- Probleme pour les polygones multi-unique et scale, ainsi que over et scale (lorsque les polyhones répondent à plusieurs logiques d'appartenance)
 
+<<<<<<< HEAD
 -   [ ] marges titres
 
 -   [x] Texte justifié
+=======
+- Pour les polygones "world" et leur probleme de plot peut-on tous les remplacer par un polygone type ? (plutot non)
+>>>>>>> 37938743ad31b6ae5e44800f23479de21a96e8bb
 
--   [ ] Alinea 0.5 / 1
 
--   [ ] Notes de bas de page 9 / 10
+- Que faire des polygones dupliqués
+## L'outil : Maptionnaire 
+### Les biais 
 
--   [ ] Meme police y compris titres
+#### Systèmes d'exploitation et navigateurs internet pris en charge
 
--   [ ] Ligne sous le titre d'un chapitre
+>**Does Maptionnaire have any system or browser requirements?**
+    Maptionnaire uses commercially reasonable efforts to support the two most recent major versions of operating systems with significant market share (>1%) running up-to-date versions of browsers with significant market share (>1%). 
+    
+    As of November 9, 2021, the supported operating systems and versions for respondents are:
+        - Windows (11, 10)
+        - macOS (12, 11)
+        - Android (12, 11)
+        - iOS/iPadOS (15, 14)
+    
+    The supported browsers are Chrome, Safari, Firefox, Samsung Internet, Edge, and Opera. 
+    For optimal performance, please remember to make sure that you have the latest browser version.  
+    If you are part of a team using Maptionnaire to create questionnaires and other content, we recommend that you use the latest version of Chrome. 
 
--   [ ] **Marges** : 2.54
+Windows 10 : 2014
+Windows 11 : 2021
+macOS 11 : 2020
+macOS 12 : 2021
+Android 11 : 2020
+Android 12 : 2022
+iOS/iPadOS 14 : 2020
+iOS/iPadOS 15 : 2021
 
+
+==> Probleme de compatibilité peut etres avec certains parcs informatiques/technologiques possiblement controlable avec des données économiques et de part de marché pour chaque pays. 
+
+Test de l'application evisageable sur des sites de developpemetn web type "browserStack".
+ 
+### Les questions 
+**DROM**  
+On peut supposer que la surreprésenation des droms dans les polygones des français metropolitains est due à la récurrence du terme "DROM" tout au long du questionnaire 
+
+**Polygones**
+La question n'est pas exactement traduite correctement dans chaque langue. Des mot ont été ajouté en allemand par exemple. D'autre part les termes "pays" et "limites" posent des problème d'interprésation (pays = country = campagne ??? - limite = frontiere ???)
+
+
+
+## Exploitation de la Base de donnée "Réponses"
+
+- Explo des données manquantes : VIM ? 
+    - distribution des VM  (dispositifs et mécanismes)
+    - CAH ou autre pour établir une typologie des NA (profils des répondants)
+- Objectifs de l'enquetes en termes d'effectifs : 
+    - 5 pays : Tunisie, Turquie, France, Allemagne, Irelande
+    - 3 Villes par Pays
+    - 240 etudiants par ville
+    - 40 etudiants par discipline
+
+## EuroBroadMap 
+Les reusltats europe sont tres normées, voir prévisibles, tandis que d'autres pays adoptent un regard plus critique vis à vis de l'europe. 
+- Chine  mode, luxe, sp
+Afrique : tunisie et senegal : crique sur le racisme / inegalité / colonialisme
+Bresil : 
+
+<<<<<<< HEAD
 -   [ ] parametre citations
 
 -   [ ] parametre footnotes
 
+=======
+>>>>>>> 37938743ad31b6ae5e44800f23479de21a96e8bb

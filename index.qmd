@@ -1,10 +1,6 @@
 # Introduction
 
-Elle doit mentionner : les objectifs, les lieux d'étude, l'intérêt du projet : pour un public particulier
-? Une nouvelle méthodologie ? Une monographie sur un espace donné ? Durée.
-Un rapport orienté « recherche » développera la problématique qui sous-tend le questionnement
-de recherche et formulera, le cas échéant, les hypothèses de travail.
-
+Elle doit mentionner : les objectifs, les lieux d'étude, l'intérêt du projet : pour un public particulier ? Une nouvelle méthodologie ? Une monographie sur un espace donné ? Durée. Un rapport orienté « recherche » développera la problématique qui sous-tend le questionnement de recherche et formulera, le cas échéant, les hypothèses de travail.
 
 ```{r}
 if(knitr::is_latex_output()){
@@ -12,7 +8,7 @@ if(knitr::is_latex_output()){
 }
 ```
 
------
+------------------------------------------------------------------------
 
 This is a Quarto book.
 

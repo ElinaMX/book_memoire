@@ -42,6 +42,8 @@ format:
     highlight-style: solarized 
     # interlinespace: |
     #   \setupinterlinespace[line=12pt]
+    highlight-style: github
+    interlinespace: 4pt
     geometry: 
       - margin = 2.5cm
 
