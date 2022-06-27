@@ -32,17 +32,23 @@ format:
     pagestyle: headings
     toc: true
     toc-title: "Table des matières"
+    number-depth: 3
+    indent: true
     # lof: true
     # lot: true
     code-line-numbers: true
     fontfamily: gfsartemisia
     # fontenc: gfsartemisia
-    highlight-style: github
-    interlinespace: \setupinterlinespace[line=1.5pt]
+    highlight-style: solarized 
+    # interlinespace: |
+    #   \setupinterlinespace[line=12pt]
     geometry: 
       - margin = 2.5cm
 
     keep-tex: true
+    linestretch: |
+      \onehalfspacing
+      
     include-in-header:
       - header.tex
     include-before-body: 

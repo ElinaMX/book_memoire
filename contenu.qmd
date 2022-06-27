@@ -2,6 +2,7 @@
 
 Il comporte deux ou trois parties (1, 2, 3) subdivisées en deux ou trois sous parties ( 1.1, 1.2, 1.3) tout au plus. En lisant les titres des 4 à 9 sous parties, on doit pouvoir se faire une idée du contenu et de la démarche de l'étude. Le texte est fait pour être lu par une personne qui n'a pas suivi le travail du stagiaire. Un rapport orienté « recherche » intégrera obligatoirement une partie « état de l'art » et valorisera les références bibliographiques.
 
+
 ## La forme du mémoire
 
 -   utiliser souvent les illustrations et les graphiques, notamment pour les chaines de traitement et l'organisation. il est important que le mémoire reste lisible et très rapidement compréhensible.
@@ -40,6 +41,8 @@ Il comporte deux ou trois parties (1, 2, 3) subdivisées en deux ou trois sous p
 
 -   [ ] Interligne : 1.5
 
+-   [ ] marges titres
+
 -   [x] Texte justifié
 
 -   [ ] Alinea 0.5 / 1
@@ -52,4 +55,7 @@ Il comporte deux ou trois parties (1, 2, 3) subdivisées en deux ou trois sous p
 
 -   [ ] **Marges** : 2.54
 
--   [ ] 
+-   [ ] parametre citations
+
+-   [ ] parametre footnotes
+
