@@ -1,20 +1,19 @@
 # Méthodologie
+> **Contenu central du rapport**
 
->**Contenu central du rapport**
+> Il comporte deux ou trois parties (1, 2, 3) subdivisées en deux ou trois sous parties ( 1.1, 1.2, 1.3) tout au plus. En lisant les titres des 4 à 9 sous parties, on doit pouvoir se faire une idée du contenu et de la démarche de l'étude. Le texte est fait pour être lu par une personne qui n'a pas suivi le travail du stagiaire. Un rapport orienté « recherche » intégrera obligatoirement une partie « état de l'art » et valorisera les références bibliographiques.
 
->Il comporte deux ou trois parties (1, 2, 3) subdivisées en deux ou trois sous parties ( 1.1, 1.2, 1.3) tout au plus. En lisant les titres des 4 à 9 sous parties, on doit pouvoir se faire une idée du contenu et de la démarche de l'étude. Le texte est fait pour être lu par une personne qui n'a pas suivi le travail du stagiaire. Un rapport orienté « recherche » intégrera obligatoirement une partie « état de l'art » et valorisera les références bibliographiques.
-
+## La chaine de traitement
 
 ## Traitement de la base de donnée "géométries"
-
 Possibilité de créer un package pour exploiter les données.\
 Pour produire des tableaux à la volée (BDG & BDR) et les gaphiques, cartes, statistiques qui en découlent. Ce travail necessite l'identification précise de productions pour chacun de ces volets (quels graphiques sur quelles données, etc).
 
 ### Géométries et leur classification : enjeux méthodologiques
 
 -   Comparer la superficie du polygone avec la superficie réelle de l'espace décrit (notamment lorsque le mot attribué correspond à cet espace).
--   Quel ordre des polygones pour un même mot donnée
--   Justifier l’intérêt de juger à l'oeil (controle humain face à la redondance de la tache).
+-   Quel ordre des polygones pour un meme mot donnée
+-   Justifier l'interet de juger à l'oeil (controle humain face à la redondance de la tache).
 -   Justifier l'usage des menus e leur pertinences vis à vis d'une approche automatisée (identifier les actions automatisables)
     -   Geom repair : intersection
     -   txt move/add : au cas ou mais tres peu utilisé finalement
@@ -28,7 +27,7 @@ Classification manuelle supervisée (à deux ou trois) pourquoi ? quelle utilit�
 
 ### La visualisation pour exploration
 
-***Décrire la méthode d'affichage et de classification des polygones puis exposer les problèmes*** ***Présenter les problèmes de géométrie sous forme de schémas / chorème ?***
+***Décrire la méthode d'affichage et de classificationd es polygones puis exposer les problèmes*** ***Présenter les problèmes de géométrie sous forme de shémas / chorème ?***
 
 Problème sémiologiques pour juger rapidement et efficacement dans un premier temps du polygone, puis dans un second temps des choix fait sur ce/ces polygones (contrôle).
 
@@ -36,7 +35,8 @@ Le choix du fond de carte et de sa généralisation posent des enjeux concernant
 
 Dans le premier cas, on visualise un polygone dans un océan sans repères autour (pas d'îles), on peut estimer la justesse du dessin grace aux informations récupérées directement du répondant (le mot associé ou son université d'appartenance surtout) ainsi que par les autres polygones dessinée (lorsqu'il y en a). Surtout ce problème est corrigé en choisissant une échelle de représentation plus fine pour le fond de carte.
 
-Dans le second cas le problème est plus délicat. Il ne s'agit pas d'une niveau de détail du à la généralisation mais à des limites adminstratives ou de toponymes présents ou non pour aider à reconaitre le lieu décrit par le polygone Dans ce cas, choisir un fond de carte plus riche pose d'abord la contrainte de l'alourdissement de la représentation, de la saturation de l'espace visuel au détriment du jugement du polygone (qui est l'objet premier necessitant toute l'attention du visualisateur). Cette option améliore la reconnaissance du lieu décrit par le polygone mais pas à tous les coups. Il peut encore etre necessaire, lorsque la région n'est pas connue, ou encore trop petite de "dézoomer".\
+Dans le second cas le problème est plus délicat. Il ne s'agit pas d'une niveau de détail du à la généralisation mais à des limites adminstratives ou de toponymes présents ou non pour aider à reconaitre le lieu décrit par le polygone Dans ce cas, choisir un fond de carte plus riche pose d'abord la contrainte de l'alourdissement de la représentation, de la saturation de l'espace visuel au détriment du jugement du polygone (qui est l'objet premier necessitant toute l'attention du visualisateur). Cette option améliore la reconnaissance du lieu décrit par le polygone mais pas à tous les coups. Il peut encore etre necessaire, lorsque la région n'est pas connue, ou encore trop petite de "dézoomer".
+
 L'alternative retenue (dans un premier temps) à été de quitter la boucle d'affichage et de passer par une cartographie interactive des tous les polygones d'un répondant sur une meme carte. Ici le fond de carte est produit par Open Street Map et la généralisation des toponymes et des limites administratives des pays se faut automatique selon le zoom répondant de façon interactive. Ici encore les informations additionnelles données par le répondant sont accessibles pour chacun des polygones via une infobulle générée au clic.
 
 Une autre alternative eu été de directement représenter les polygones via cette carte interactive au sein meme de la boucle.\
@@ -50,24 +50,44 @@ Cette option n'a pas encore été explorée.
 
 -   Pour les polygones "world" et leur probleme de plot peut-on tous les remplacer par un polygone type ? (plutot non)
 
--   Que faire des polygones dupliqués \## L'outil : Maptionnaire \### Les biais
+-   Que faire des polygones dupliqués
+
+## L'outil : Maptionnaire
+
+### Les biais
 
 #### Systèmes d'exploitation et navigateurs internet pris en charge
 
-> **Does Maptionnaire have any system or browser requirements?** Maptionnaire uses commercially reasonable efforts to support the two most recent major versions of operating systems with significant market share running up-to-date versions of browsers with significant market share
+> **Does Maptionnaire have any system or browser requirements?** *Maptionnaire uses commercially reasonable efforts to support the two most recent major versions of operating systems with significant market share running up-to-date versions of browsers with significant market share*
 
-    As of November 9, 2021, the supported operating systems and versions for respondents are:
-        - Windows (11, 10)
-        - macOS (12, 11)
-        - Android (12, 11)
-        - iOS/iPadOS (15, 14)
+> *As of November 9, 2021, the supported operating systems and versions for respondents are:* *- Windows (11, 10)* *- macOS (12, 11)* *- Android (12, 11)* *- iOS/iPadOS (15, 14)*
 
-The supported browsers are Chrome, Safari, Firefox, Samsung Internet, Edge, and Opera. For optimal performance, please remember to make sure that you have the latest browser version.\
-If you are part of a team using Maptionnaire to create questionnaires and other content, we recommend that you use the latest version of Chrome.
+> *The supported browsers are Chrome, Safari, Firefox, Samsung Internet, Edge, and Opera. For optimal performance, please remember to make sure that you have the latest browser version.\
+> If you are part of a team using Maptionnaire to create questionnaires and other content, we recommend that you use the latest version of Chrome.*
 
-Windows 10 : 2014 Windows 11 : 2021 macOS 11 : 2020 macOS 12 : 2021 Android 11 : 2020 Android 12 : 2022 iOS/iPadOS 14 : 2020 iOS/iPadOS 15 : 2021
+Les tables suivantes décrivent l'année de sortie des OS pour les ordinateurs et smartphone.
 
-Probleme de compatibilité peut etre avec certains parcs informatiques/technologiques possiblement controlable avec des données économiques et de part de marché pour chaque pays.
+::: {#tbl-panel .table layout-ncol="2"}
+|      WINDOWS      |      MACOS      |
+|:-----------------:|:---------------:|
+| Windows 10 : 2014 | macOS 11 : 2020 |
+| Windows 11 : 2021 | macOS 12 : 2021 |
+
+: Compatibilité ordinateur {#tbl-ordi}
+
+|      Android      |       iOS/iPAD       |
+|:-----------------:|:--------------------:|
+| Android 11 : 2020 | iOS/iPadOS 14 : 2020 |
+| Android 12 : 2022 | iOS/iPadOS 15 : 2021 |
+
+: Compatibilité smartphone {#tbl-phone}
+
+Systèmes d'opération compatibles au 28/06/2022
+:::
+
+Comme on peut le voir sur la @tbl-panel, on peut imaginer des problèmes de compatibilité peut etre avec certains parcs informatiques/technologiques possiblement controlable avec des données économiques et de part de marché pour chaque pays. L'application a été massivement *(chiffre etude)*[@bailly2005] utilisée au moyen d'un téléphone, la @tbl-phone nous montre que pour bien fonctionner il faut des téléphones plutot récents, de moins de 2 ans... Ou en tout cas fonctionnant sur un OS récent (de nombreux anciens téléphones peuvent soutenirs de telles mises à jour mais pas tous).[^methodologie-1]
+
+[^methodologie-1]: Ainsi les téléphone samsugn et Iphone peuvent etre plus performant et mieux mis à jour que des marques moins importantes n'assurant pas la compatibilité au cours du temps. [@noucher2015]
 
 Test de l'application evisageable sur des sites de developpemetn web type "browserStack".
 
@@ -88,26 +108,6 @@ Test de l'application evisageable sur des sites de developpemetn web type "brows
     -   240 etudiants par ville
     -   40 etudiants par discipline
 
-## EuroBroadMap
 
-Les résultats Europe sont très normées, voir prévisibles, tandis que d'autres pays adoptent un regard plus critique vis à vis de l'Europe. - Chine mode, luxe, sp Afrique : Tunisie et Sénégal : crique sur le racisme / inégalité / colonialisme Brésil :
 
-## Poursuites et valorisation 
 
-On peut envisager la création d'un package R permettant l'exploitation de cette base de donnée. Il reprendrait l'essentiel des scripts déjà écrit pour la construction de la BD et proposerait d'autres fonctions permettant d'une part l'extraction de sous bases de données (spécifiques à des ensembles géographiques ou à certaines thématiques issues des questions) et d'autres part un exploitation visuelle sous forme de graphiques et de cartes "clé en main".
-
-L'interet d'un package :
-
--   pas dans une culture de remise a disposition avant mais maintenant oui
-
--   Peu d'autres projets qui reposnent sur les prjets initiaux
-
--   ANR corpus : produit central est la donnée et le but est justement d'etre utilise par tous
-
--   Aussi pu reutilise à l'interieur du projet : probleme de temporalité et des objectifs directs.
-
--   meta analyse sur l'usage global de toute sles données produites ?????
-
--   
-
-\*\*Faire la différence entre valorisation/diffusion et "reproductibilité"

@@ -1,37 +1,30 @@
 # A FAIRE
 
+## Mise en page
+
+-   [ ] Police taille 11 / 12
+-   [ ] Interligne : 1.5 uniquement sur les paragraphes
+-   [x] Texte justifié
+-   [x] Alinea 0.5 / 1
+-   [x] Notes de bas de page 9 / 10
+-   [x] Meme police y compris titres
+-   [ ] Ligne sous le titre d'un chapitre
+-   [x] **Marges** : 2.54
+-   [ ] parametre citations
+-   [ ] parametre footnotes
+-   [ ] marges titres reduite
+-   [x] derniere de couverture : resumé + mot lef (back cover)
+-   [ ] citation des figures generees en R
+-   [ ] taille text fig cap
+-   [ ] position des tables
+-   [ ] parametres des blocs citation "\>" (italique sans interligne)
+-   \[ \]
+
 ## Dev
-- remplacer code interactif par un screenshot
-- header.tex : pdf:
-                includes:
-                  in_header: header.tex
-                  ou équivalent
-                  
+
+-   remplacer code interactif par un screenshot
+-   header.tex : pdf: includes: in_header: header.tex ou équivalent
+
 https://quarto.org/docs/reference/formats/context.html
 
-
-
-
-  https://quarto.org/docs/get-started/authoring/rstudio.html
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+https://quarto.org/docs/get-started/authoring/rstudio.html

@@ -1,5 +1,4 @@
-# Notes rendez-vous Antoine
-
+# Notes rendez-vous Antonine {.unnumbered}
 Dimension politique des visualisation à mettre en avant
 
 ## Les visualisations
@@ -69,17 +68,3 @@ Ici discuter des apports du stage dans le domaine de la gestion de projet et de 
 
 -   **OBJECTIFS** : reproductibilité, analyse, mise à disposition des données (et proposition d'exploitation de ces données
 
-## Mise en page
-
--   [ ] Police taille 11 / 12
--   [ ] Interligne : 1.5
--   [x] Texte justifié
--   [ ] Alinea 0.5 / 1
--   [ ] Notes de bas de page 9 / 10
--   [ ] Meme police y compris titres
--   [ ] Ligne sous le titre d'un chapitre
--   [ ] **Marges** : 2.54
--   [ ] parametre citations
--   [ ] parametre footnotes
--   [ ] marges titres
--   [x] Texte justifié

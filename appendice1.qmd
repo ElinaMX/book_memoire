@@ -1,7 +1,0 @@
-# More results {#sec-more-results}
-
-Some results that wouldn't fit into the main thesi
-
-Some results that wouldn't fit into the main thesis
-
-![cover](cover.png)

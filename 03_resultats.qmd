@@ -1,0 +1,138 @@
+# Résultats
+
+Ils comportent les éléments qui permettent d'apprécier si la démarche, la méthode, etc... sont utilisables, généralisables ....
+
+## Poursuites et valorisation
+
+On peut envisager la création d'un package R permettant l'exploitation de cette base de donnée. Il reprendrait l'essentiel des scripts déjà écrit pour la construction de la BD et proposerait d'autres fonctions permettant d'une part l'extraction de sous bases de données (spécifiques à des ensembles géographiques ou à certaines thématiques issues des questions) et d'autres part un exploitation visuelle sous forme de graphiques et de cartes "clé en main".
+
+L'interet d'un package :
+
+-   pas dans une culture de remise a disposition avant mais maintenant oui
+-   Peu d'autres projets qui reposent sur les projets initiaux
+-   ANR corpus : produit central est la donnée et le but est justement d'etre utilise par tous
+-   Aussi pu reutilise à l'interieur du projet : probleme de temporalité et des objectifs directs.
+-   meta analyse sur l'usage global de toute sles données produites ?????
+
+**Faire la différence entre valorisation/diffusion et "reproductibilité"**
+
+---- 
+
+This is a Quarto book.
+
+To learn more about Quarto books visit <https://quarto.org/docs/books>.
+
+```{r packages}
+library(palmerpenguins)
+library(ggplot2)
+```
+
+```{r code}
+#| echo: true
+
+1 + 1
+```
+
+Ici la @fig-chart1 produit avec `R` puis enregistré en image et lu en `markdown`
+
+![Chart Bar des NAS](figures/bar_classify_Del_29_04_22_17h.png){#fig-chart1}
+
+Puis ci-dessous la @fig-chart2 image lu avec `knit` via un chunk r
+
+```{r chart2}
+#| label: fig-chart2
+#| fig-cap: Chart with Knitr
+
+library(knitr)
+include_graphics(path = "figures/bar_classify_Del_29_04_22_17h.png")
+
+```
+Voici le @fig-chartCol produit avec `R` et dont on ne peut pas lire le (court) script et qui s'affiche sur deux colonnes
+
+```{r chartCol}
+#| label: fig-chartCol
+#| echo: false
+#| layout-ncol: 2
+#| fig-cap: Two sided charts 
+#| fig-subcap: 
+#|   - "Speed and Stopping Distances of Cars"
+#|   - "Vapor Pressure of Mercury as a Function of Temperature"
+
+plot(cars)
+plot(pressure)
+```
+
+Enfin la @fig-plot-mtcars2 décrivant une courbe et son loess ainsi que le script le construisant
+
+```{r chart3}
+#| echo: true
+#| label: fig-plot-mtcars2
+#| fig-cap: "MPG gorsepower"
+#| warning: false
+
+mtcars_jj <- mtcars
+
+mtcars_jj$am <- factor(x = mtcars$am, 
+                     labels = c("automatic", "manuel"))
+
+ggplot(data = mtcars_jj, aes(hp, mpg, color = am)) +
+  geom_point() +
+  geom_smooth(method = "loess") +
+  theme(legend.position = "bottom")
+
+```
+
+Ceci est un exemple de diagramme écrit en `mermaid`
+
+```{mermaid}
+%%| echo: true
+
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+```
+
+Un autre exemple de diagramme
+
+```{mermaid}
+%%| echo: true
+%%| fig-cap: mermaid diagram
+
+sequenceDiagram
+  participant Alice
+  participant Bob
+  Alice->>John: Hello John, how are you?
+  loop Healthcheck
+    John->>John: Fight against hypochondria
+  end
+  Note right of John: Rational thoughts <br/>prevail!
+  John-->>Alice: Great!
+  John->>Bob: How about you?
+  Bob-->>John: Jolly good!
+```
+
+## Data
+
+The penguins data from the [**palmerpenguins**](https://allisonhorst.github.io/palmerpenguins "palmerpenguins R package") package contains size measurements for  nrow(penguins) penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.
+
+The @fig-plot-penguins below shows the relationship between flipper and bill lengths of these penguins.
+```{r}
+#| label: fig-plot-penguins
+#| fig-cap: Happy Penguins
+#| warning: false
+#| echo: true
+
+ggplot(penguins, 
+       aes(x = flipper_length_mm, y = bill_length_mm)) +
+  geom_point(aes(color = species, shape = species)) +
+  scale_color_manual(values = c("darkorange","purple","cyan4")) +
+  labs(
+    title = "Flipper and bill length",
+    subtitle = "Dimensions for penguins at Palmer Station LTER",
+    x = "Flipper length (mm)", y = "Bill length (mm)",
+    color = "Penguin species", shape = "Penguin species"
+  ) +
+  theme_minimal()
+```

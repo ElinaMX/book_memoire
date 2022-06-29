@@ -1,0 +1,69 @@
+% Load packages
+\usepackage{titling}
+\usepackage{authoraftertitle}
+\usepackage{setspace}
+% \usepackage{titlesec}
+% \usepackage[pagestyles]{titlesec}
+
+% Set space between paragraphs and indent
+% \usepackage[skip=10pt plus1pt, indent=20pt]{parskip}
+\usepackage[skip=10pt plus1pt]{parskip}
+\parindent = 20pt
+% \oneandahalfspacing
+
+% \titleformat
+% {\chapter} % command
+% [display] % shape
+% {\bfseries\Large\itshape} % format
+% {Story No. \ \thechapter} % label
+% {0.5ex} % sep
+% {
+%     \rule{\textwidth}{1pt}
+%     \vspace{1ex}
+%     \centering
+% } % before-code
+% [
+% \vspace{-0.5ex}%
+% \rule{\textwidth}{0.3pt}
+% ] % after-code
+
+% \titleformat{\chapter}%
+%   {\normalfont\bfseries\Huge}{\thechapter.}{10pt}{}
+% \newpagestyle{mystyle}{
+%   \sethead[][\thechapter.\enspace\chaptertitle][]{}{\thesection~\sectiontitle}{}
+% \setfoot{}{\thepage}{}}
+% 
+
+
+
+
+\setlength{\droptitle}{-3cm}
+\preauthor{
+  \begin{center}
+  \includegraphics[width=5in,height=4in]{cover.png}\\ % cover figure
+  \Large
+  \vspace{10mm}
+}
+\postauthor{
+  \end{center}
+}
+\predate{
+  \begin{center}
+  Collège International des Scicences Territoriales \\ 
+  Encadré par Hugues Pécout - Ingénieur de recherche, géomaticien\\
+  \vspace{5mm}
+  Master Carthagéo\\
+  \vspace{5mm}
+}
+\postdate{
+  \vspace{10mm}
+  \\
+  \includegraphics[width=4in,height=1in]{figures/logos/logos3.jpg}\\
+  % \includegraphics[width=1.5in,height=1.5in]{figures/logos/logos.jpg}\\
+  \end{center}
+  \newpage
+  \mbox{}
+  \vfill
+  % Cover page\\
+  % \emph{Beckwithia glacialis} on Snøhetta.
+ }

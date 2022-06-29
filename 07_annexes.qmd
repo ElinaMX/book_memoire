@@ -1,0 +1,5 @@
+# Quelques résultats supplémentaires  {.unnumbered}
+
+Some results that wouldn't fit into the main thesis
+
+![cover](cover.png)

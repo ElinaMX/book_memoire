@@ -9,7 +9,6 @@
 
 \usepackage{amsmath,amssymb}
 \usepackage[]{gfsartemisia}
-\usepackage{setspace}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
@@ -130,45 +129,8 @@
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
-% Load packages
 \usepackage{titling}
 \usepackage{authoraftertitle}
-\usepackage{setspace}
-% \usepackage{titlesec}
-% \usepackage[pagestyles]{titlesec}
-
-% Set space between paragraphs and indent
-% \usepackage[skip=10pt plus1pt, indent=20pt]{parskip}
-\usepackage[skip=10pt plus1pt]{parskip}
-\parindent = 20pt
-% \oneandahalfspacing
-
-% \titleformat
-% {\chapter} % command
-% [display] % shape
-% {\bfseries\Large\itshape} % format
-% {Story No. \ \thechapter} % label
-% {0.5ex} % sep
-% {
-%     \rule{\textwidth}{1pt}
-%     \vspace{1ex}
-%     \centering
-% } % before-code
-% [
-% \vspace{-0.5ex}%
-% \rule{\textwidth}{0.3pt}
-% ] % after-code
-
-% \titleformat{\chapter}%
-%   {\normalfont\bfseries\Huge}{\thechapter.}{10pt}{}
-% \newpagestyle{mystyle}{
-%   \sethead[][\thechapter.\enspace\chaptertitle][]{}{\thesection~\sectiontitle}{}
-% \setfoot{}{\thepage}{}}
-% 
-
-
-
-
 \setlength{\droptitle}{-3cm}
 \preauthor{
   \begin{center}
@@ -271,7 +233,6 @@ Résumé du stage (dont le sujet) en 10 lignes en français et en anglais. Infor
 \setcounter{tocdepth}{2}
 \tableofcontents
 }
-\setstretch{1.5}
 \mainmatter
 \bookmarksetup{startatroot}
 
@@ -284,33 +245,6 @@ projet : pour un public particulier ? Une nouvelle méthodologie ? Une
 monographie sur un espace donné ? Durée. Un rapport orienté « recherche
 » développera la problématique qui sous-tend le questionnement de
 recherche et formulera, le cas échéant, les hypothèses de travail.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-This is a Quarto book.
-
-To learn more about Quarto books visit
-\url{https://quarto.org/docs/books}.
-
-\begin{Shaded}
-\begin{Highlighting}[numbers=left,,]
-\DecValTok{1} \SpecialCharTok{+} \DecValTok{1}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-[1] 2
-\end{verbatim}
-
-\begin{figure}
-
-{\centering \includegraphics{./figures/bar_classify_Del_29_04_22_17h.png}
-
-}
-
-\caption{Chart Bar des NAS}
-
-\end{figure}
 
 \bookmarksetup{startatroot}
 
@@ -502,6 +436,46 @@ besoin d'être recadrée.
   données (et proposition d'exploitation de ces données
 \end{itemize}
 
+\hypertarget{mise-en-page}{%
+\section*{Mise en page}\label{mise-en-page}}
+\addcontentsline{toc}{section}{Mise en page}
+
+\begin{itemize}
+\tightlist
+\item[$\square$]
+  Police taille 11 / 12
+\item[$\square$]
+  Interligne : 1.5
+\item[$\boxtimes$]
+  Texte justifié
+\item[$\boxtimes$]
+  Alinea 0.5 / 1
+\item[$\boxtimes$]
+  Notes de bas de page 9 / 10
+\item[$\boxtimes$]
+  Meme police y compris titres
+\item[$\square$]
+  Ligne sous le titre d'un chapitre
+\item[$\boxtimes$]
+  \textbf{Marges} : 2.54
+\item[$\square$]
+  parametre citations
+\item[$\square$]
+  parametre footnotes
+\item[$\square$]
+  marges titres reduite
+\item[$\boxtimes$]
+  derniere de couverture : resumé + mot lef (back cover)
+\item[$\square$]
+  citation des figures generees en R
+\item[$\square$]
+  taille text fig cap
+\item[$\square$]
+  position des tables
+\item
+  {[} {]}
+\end{itemize}
+
 \bookmarksetup{startatroot}
 
 \hypertarget{contexte}{%
@@ -511,14 +485,6 @@ besoin d'être recadrée.
 Contexte (structure, projet, enjeux du projet, comment le stage s'insère
 dans le projet, quels acteurs sont rencontrés et quels sont leurs rôles)
 \end{quote}
-
-\hypertarget{eurobroadmap}{%
-\section{EuroBroadMap}\label{eurobroadmap}}
-
-Les résultats Europe sont très normées, voir prévisibles, tandis que
-d'autres pays adoptent un regard plus critique vis à vis de l'Europe. -
-Chine mode, luxe, sp Afrique : Tunisie et Sénégal : crique sur le
-racisme / inégalité / colonialisme Brésil :
 
 \bookmarksetup{startatroot}
 
@@ -812,13 +778,13 @@ frontiere ???)
   \end{itemize}
 \end{itemize}
 
-\bookmarksetup{startatroot}
+\hypertarget{eurobroadmap}{%
+\section{EuroBroadMap}\label{eurobroadmap}}
 
-\hypertarget{ruxe9sultats}{%
-\chapter{Résultats}\label{ruxe9sultats}}
-
-Ils comportent les éléments qui permettent d'apprécier si la démarche,
-la méthode, etc\ldots{} sont utilisables, généralisables \ldots.
+Les résultats Europe sont très normées, voir prévisibles, tandis que
+d'autres pays adoptent un regard plus critique vis à vis de l'Europe. -
+Chine mode, luxe, sp Afrique : Tunisie et Sénégal : crique sur le
+racisme / inégalité / colonialisme Brésil :
 
 \hypertarget{poursuites-et-valorisation}{%
 \section{Poursuites et valorisation}\label{poursuites-et-valorisation}}
@@ -838,7 +804,7 @@ L'interet d'un package :
 \item
   pas dans une culture de remise a disposition avant mais maintenant oui
 \item
-  Peu d'autres projets qui reposent sur les projets initiaux
+  Peu d'autres projets qui reposnent sur les prjets initiaux
 \item
   ANR corpus : produit central est la donnée et le but est justement
   d'etre utilise par tous
@@ -852,7 +818,13 @@ L'interet d'un package :
 \textbf{Faire la différence entre valorisation/diffusion et
 ``reproductibilité''}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\bookmarksetup{startatroot}
+
+\hypertarget{ruxe9sultats}{%
+\chapter{Résultats}\label{ruxe9sultats}}
+
+Ils comportent les éléments qui permettent d'apprécier si la démarche,
+la méthode, etc\ldots{} sont utilisables, généralisables \ldots.
 
 This is a Quarto book.
 
@@ -869,8 +841,8 @@ To learn more about Quarto books visit
 [1] 2
 \end{verbatim}
 
-Ici la Figure~\ref{fig-chart1} produit avec \texttt{R} puis enregistré
-en image et lu en \texttt{markdown}
+Ici le (\textbf{chart1?}) produit avec \texttt{R} puis enregistré en
+image et lu en \texttt{markdown}
 
 \begin{figure}
 
@@ -878,25 +850,17 @@ en image et lu en \texttt{markdown}
 
 }
 
-\caption{\label{fig-chart1}Chart Bar des NAS}
+\caption{Chart Bar des NAS}
 
 \end{figure}
 
-Puis ci-dessous la Figure~\ref{fig-chart2} image lu avec \texttt{knit}
-via un chunk r
+Puis ci-dessous le (\textbf{chart2?}) image lu avec \texttt{knit} via un
+chunk r
 
-\begin{figure}
+\includegraphics[width=3.17in,height=\textheight]{./figures/bar_classify_Del_29_04_22_17h.png}
 
-{\centering \includegraphics[width=3.17in,height=\textheight]{./figures/bar_classify_Del_29_04_22_17h.png}
-
-}
-
-\caption{\label{fig-chart2}Chart with Knitr}
-
-\end{figure}
-
-Voici le Figure~\ref{fig-chartCol} produit avec \texttt{R} et dont on ne
-peut pas lire le (court) script et qui s'affiche sur deux colonnes
+Voici le (\textbf{chartCol?}) produit avec \texttt{R} et dony on ne peut
+pas lire le (court) script et qui s'affiche sur deux colonnes
 
 \begin{figure}
 
@@ -906,13 +870,14 @@ peut pas lire le (court) script et qui s'affiche sur deux colonnes
 
 \raisebox{-\height}{
 
-\includegraphics{./03_resultats_files/figure-pdf/fig-chartCol-1.pdf}
+\includegraphics{./03_resultats_files/figure-pdf/chartCol-1.pdf}
 
 }
 
+\caption{Speed and Stopping Distances of Cars}
+
 }
 
-\subcaption{\label{fig-chartCol-1}Speed and Stopping Distances of Cars}
 \end{minipage}%
 %
 \begin{minipage}[t]{0.50\linewidth}
@@ -921,21 +886,19 @@ peut pas lire le (court) script et qui s'affiche sur deux colonnes
 
 \raisebox{-\height}{
 
-\includegraphics{./03_resultats_files/figure-pdf/fig-chartCol-2.pdf}
+\includegraphics{./03_resultats_files/figure-pdf/chartCol-2.pdf}
 
 }
 
+\caption{Vapor Pressure of Mercury as a Function of Temperature}
+
 }
 
-\subcaption{\label{fig-chartCol-2}Vapor Pressure of Mercury as a
-Function of Temperature}
 \end{minipage}%
-
-\caption{\label{fig-chartCol}Two sided charts}
 
 \end{figure}
 
-Enfin la Figure~\ref{fig-plot-mtcars2} décrivant une courbe et son loess
+Enfin le (\textbf{plot-mtcars2?}) décrivant une courbe et son loess
 ainsi que le script le construisant
 
 \begin{Shaded}
@@ -954,11 +917,11 @@ ainsi que le script le construisant
 
 \begin{figure}[H]
 
-{\centering \includegraphics{./03_resultats_files/figure-pdf/fig-plot-mtcars2-1.pdf}
+{\centering \includegraphics{./03_resultats_files/figure-pdf/plot-mtcars2-1.pdf}
 
 }
 
-\caption{\label{fig-plot-mtcars2}MPG gorsepower}
+\caption{MPG gorsepower}
 
 \end{figure}
 
@@ -983,7 +946,7 @@ Ceci est un exemple de diagramme écrit en \texttt{mermaid}
 
 \end{figure}
 
-Un autre exemple de diagramme
+U autre exemple de diagramme
 
 \begin{Shaded}
 \begin{Highlighting}[numbers=left,,]
@@ -1017,12 +980,10 @@ mermaid diagram
 
 The penguins data from the
 \href{https://allisonhorst.github.io/palmerpenguins}{\textbf{palmerpenguins}}
-package contains size measurements for nrow(penguins) penguins from
+package contains size measurements for r nrow(penguins) penguins from
 three species observed on three islands in the Palmer Archipelago,
-Antarctica.
-
-The Figure~\ref{fig-plot-penguins} below shows the relationship between
-flipper and bill lengths of these penguins.
+Antarctica./ The plot below shows the relationship between flipper and
+bill lengths of these penguins.
 
 \begin{Shaded}
 \begin{Highlighting}[numbers=left,,]
@@ -1042,11 +1003,9 @@ flipper and bill lengths of these penguins.
 
 \begin{figure}[H]
 
-{\centering \includegraphics{./03_resultats_files/figure-pdf/fig-plot-penguins-1.pdf}
+{\centering \includegraphics{./03_resultats_files/figure-pdf/plot-penguins-1.pdf}
 
 }
-
-\caption{\label{fig-plot-penguins}Happy Penguins}
 
 \end{figure}
 
