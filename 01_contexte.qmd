@@ -4,3 +4,20 @@
 ## EuroBroadMap
 
 Les résultats Europe sont très normées, voir prévisibles, tandis que d'autres pays adoptent un regard plus critique vis à vis de l'Europe. - Chine mode, luxe, sp Afrique : Tunisie et Sénégal : crique sur le racisme / inégalité / colonialisme Brésil :
+
+## Echéances 
+
+* 15 Juin - **50 ans de l'ANR DFG** : *Production d'une "image" comprenant des cartes lissées des premiers résultats pour la France et l'allemagne ainsi que des nuages de mots décrivant l'Europe*
+* 20/24 Juin - **Ecole d'Ete** : *Pas directent en lien avec le stage mais plutot avec les missions de la Fédération de recherche*
+* 23/26 Juin - **Tachkent** : *Préparation des données issues des réponses turques pour la doctorante travaillant sur le projet. Il s'agissait pour elle de présenter ces résultts à une conférence avec le partenaire Turc.*
+  + Typologie des polygones 
+  + Cartographie de ces polygones
+  + Nettoyage de BD et réalisation d'un dictionnaire réduit à l'usage du partenaire
+  + Production de graphiques et résultats statistiques préliminaires
+* **30 Juin : ARRET DE LA DIFFUSION DU QUESTIONNAIRE** 
+* 18/22 Juillet - **UGI - Congrès Centenaire de l'Union Géographique Internationale** : *Préparation des données propres et prete à etre exploitées* 
+  + Typoogie des polygones restants
+  + Cartographie pour chaque pays / ville / université
+  + Graphiques pour chaque pays / ville / université
+  + ...
+  
