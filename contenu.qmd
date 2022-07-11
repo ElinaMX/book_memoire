@@ -6,7 +6,7 @@
 
 
 ## Traitement de la base de donnée "géométries"
-
+Poss
 Possibilité de créer un package pour exploiter les données.\
 Pour produire des tableaux à la volée (BDG & BDR) et les gaphiques, cartes, statistiques qui en découlent. Ce travail necessite l'identification précise de productions pour chacun de ces volets (quels graphiques sur quelles données, etc).
 
