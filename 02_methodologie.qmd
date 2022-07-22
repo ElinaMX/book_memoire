@@ -1,4 +1,5 @@
 # Méthodologie
+
 > **Contenu central du rapport**
 
 > Il comporte deux ou trois parties (1, 2, 3) subdivisées en deux ou trois sous parties ( 1.1, 1.2, 1.3) tout au plus. En lisant les titres des 4 à 9 sous parties, on doit pouvoir se faire une idée du contenu et de la démarche de l'étude. Le texte est fait pour être lu par une personne qui n'a pas suivi le travail du stagiaire. Un rapport orienté « recherche » intégrera obligatoirement une partie « état de l'art » et valorisera les références bibliographiques.
@@ -6,8 +7,11 @@
 ## La chaine de traitement
 
 ## Traitement de la base de donnée "géométries"
+
 Possibilité de créer un package pour exploiter les données.\
 Pour produire des tableaux à la volée (BDG & BDR) et les gaphiques, cartes, statistiques qui en découlent. Ce travail necessite l'identification précise de productions pour chacun de ces volets (quels graphiques sur quelles données, etc).
+
+la methode
 
 ### Géométries et leur classification : enjeux méthodologiques
 
@@ -85,9 +89,9 @@ Les tables suivantes décrivent l'année de sortie des OS pour les ordinateurs e
 Systèmes d'opération compatibles au 28/06/2022
 :::
 
-Comme on peut le voir sur la @tbl-panel, on peut imaginer des problèmes de compatibilité peut etre avec certains parcs informatiques/technologiques possiblement controlable avec des données économiques et de part de marché pour chaque pays. L'application a été massivement *(chiffre etude)*[@bailly2005] utilisée au moyen d'un téléphone, la @tbl-phone nous montre que pour bien fonctionner il faut des téléphones plutot récents, de moins de 2 ans... Ou en tout cas fonctionnant sur un OS récent (de nombreux anciens téléphones peuvent soutenirs de telles mises à jour mais pas tous).[^methodologie-1]
+Comme on peut le voir sur la @tbl-panel, on peut imaginer des problèmes de compatibilité peut etre avec certains parcs informatiques/technologiques possiblement controlable avec des données économiques et de part de marché pour chaque pays. L'application a été massivement *(chiffre etude)*[@bailly2005] utilisée au moyen d'un téléphone, la @tbl-phone nous montre que pour bien fonctionner il faut des téléphones plutot récents, de moins de 2 ans... Ou en tout cas fonctionnant sur un OS récent (de nombreux anciens téléphones peuvent soutenirs de telles mises à jour mais pas tous).[^02_methodologie-1]
 
-[^methodologie-1]: Ainsi les téléphone samsugn et Iphone peuvent etre plus performant et mieux mis à jour que des marques moins importantes n'assurant pas la compatibilité au cours du temps. [@noucher2015]
+[^02_methodologie-1]: Ainsi les téléphone samsugn et Iphone peuvent etre plus performant et mieux mis à jour que des marques moins importantes n'assurant pas la compatibilité au cours du temps. [@noucher2015]
 
 Test de l'application evisageable sur des sites de developpemetn web type "browserStack".
 
@@ -107,7 +111,3 @@ Test de l'application evisageable sur des sites de developpemetn web type "brows
     -   3 Villes par Pays
     -   240 etudiants par ville
     -   40 etudiants par discipline
-
-
-
-
