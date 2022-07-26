@@ -18,6 +18,8 @@ Comment avons nous travailler ?
 Possibilité de créer un package pour exploiter les données.\
 Pour produire des tableaux à la volée (BDG & BDR) et les gaphiques, cartes, statistiques qui en découlent. Ce travail necessite l'identification précise de productions pour chacun de ces volets (quels graphiques sur quelles données, etc).
 
+la methode
+
 ### Géométries et leur classification : enjeux méthodologiques
 
 -   Comparer la superficie du polygone avec la superficie réelle de l'espace décrit (notamment lorsque le mot attribué correspond à cet espace).
