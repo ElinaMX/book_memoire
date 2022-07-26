@@ -12,7 +12,7 @@ Les deux modes de représentations font appels à des enjeux différents (ainsi 
 -   Décrire la méthodologie
 -   Quelle est la qualité de l'information :
 -   Qualité du point de vue de la géomatique
--   Quels biais introduits dans les enquêtes "habituelles " ou en tout cas celle précédent celle-ci (eurobroadmap)
+-   Quels biais introduits dans les enquêtes "habituelles" ou en tout cas celle précédent celle-ci (eurobroadmap)
 -   Quel biais introduits par la méthodologie actuelle, quel enjeux vis à vis du choix de l'outil
 -   Comment sont identifiés/détectés les problèmes dans la BD et BDG, quelles propositions sont avancées , lesquelles sont mises en place et comment trancher ? \*\*proposer une chaîne de traitement sous forme d'image"
 -   Voir Lena Sanders : modèle LOgit pour explorer la significativité ou non du univ_field

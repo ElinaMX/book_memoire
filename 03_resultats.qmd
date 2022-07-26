@@ -1,6 +1,7 @@
 # Résultats
 
 Ils comportent les éléments qui permettent d'apprécier si la démarche, la méthode, etc... sont utilisables, généralisables ....
+## Les sous-corpus 
 
 ## Poursuites et valorisation
 
@@ -16,7 +17,19 @@ L'interet d'un package :
 
 **Faire la différence entre valorisation/diffusion et "reproductibilité"**
 
----- 
+## Ce qu'il reste à faire 
+
+Harmoniser les champs de texte et travailler sur leur diffusion à l'étranger (on parle de traduction en une seule langue (anglais ou français ?) ou d'indexation en wikidata). 
+
+Rédiger la documentation de la base de donnée sous forme de notebook accessible en ligne
+
+Mettre à disposition la base de donnée et les scripts permettant son exploitation. Cette mise à disposition sous-entend la rédaction d'un PGD *ref*, de réfléchir à la plateforme qui l'acceuillera (NAKALA en recherche pour les données, masis possible sur GITLAB humanum et GIT HUB), et quelle documentation. 
+
+## Perspectives 
+Atlas interactif peut etre ? sous quelle forme car ily a des questions sur la sensibilite des données et leur exploitation par des tiers, on aune responsabilité quant à ce qu'on fait de l'outil mis à dispositon. 
+
+## Quelles missions annexes ?
+------------------------------------------------------------------------
 
 This is a Quarto book.
 
@@ -47,6 +60,7 @@ library(knitr)
 include_graphics(path = "figures/bar_classify_Del_29_04_22_17h.png")
 
 ```
+
 Voici le @fig-chartCol produit avec `R` et dont on ne peut pas lire le (court) script et qui s'affiche sur deux colonnes
 
 ```{r chartCol}
@@ -115,9 +129,10 @@ sequenceDiagram
 
 ## Data
 
-The penguins data from the [**palmerpenguins**](https://allisonhorst.github.io/palmerpenguins "palmerpenguins R package") package contains size measurements for  nrow(penguins) penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.
+The penguins data from the [**palmerpenguins**](https://allisonhorst.github.io/palmerpenguins "palmerpenguins R package") package contains size measurements for nrow(penguins) penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.
 
 The @fig-plot-penguins below shows the relationship between flipper and bill lengths of these penguins.
+
 ```{r}
 #| label: fig-plot-penguins
 #| fig-cap: Happy Penguins

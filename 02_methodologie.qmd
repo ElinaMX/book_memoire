@@ -1,19 +1,28 @@
 # Méthodologie
+
 > **Contenu central du rapport**
 
 > Il comporte deux ou trois parties (1, 2, 3) subdivisées en deux ou trois sous parties ( 1.1, 1.2, 1.3) tout au plus. En lisant les titres des 4 à 9 sous parties, on doit pouvoir se faire une idée du contenu et de la démarche de l'étude. Le texte est fait pour être lu par une personne qui n'a pas suivi le travail du stagiaire. Un rapport orienté « recherche » intégrera obligatoirement une partie « état de l'art » et valorisera les références bibliographiques.
 
-## La chaine de traitement
 
+## La chaine de traitement
+Comment avons nous travailler ? 
+- Exploration et découverte de la base de donnée
+- Control et détection des anomalies avant de rentrer dans les traitements
+- Exploration et nettoyage (detection se poursuis)
+- Géométries
+
+## 
 ## Traitement de la base de donnée "géométries"
+
 Possibilité de créer un package pour exploiter les données.\
 Pour produire des tableaux à la volée (BDG & BDR) et les gaphiques, cartes, statistiques qui en découlent. Ce travail necessite l'identification précise de productions pour chacun de ces volets (quels graphiques sur quelles données, etc).
 
 ### Géométries et leur classification : enjeux méthodologiques
 
 -   Comparer la superficie du polygone avec la superficie réelle de l'espace décrit (notamment lorsque le mot attribué correspond à cet espace).
--   Quel ordre des polygones pour un meme mot donnée
--   Justifier l'interet de juger à l'oeil (controle humain face à la redondance de la tache).
+-   Quel ordre des polygones pour un même mot donnée
+-   Justifier l’intérêt de juger à l’œil (contrôle humain face à la redondance de la tache).
 -   Justifier l'usage des menus e leur pertinences vis à vis d'une approche automatisée (identifier les actions automatisables)
     -   Geom repair : intersection
     -   txt move/add : au cas ou mais tres peu utilisé finalement
@@ -27,7 +36,7 @@ Classification manuelle supervisée (à deux ou trois) pourquoi ? quelle utilit�
 
 ### La visualisation pour exploration
 
-***Décrire la méthode d'affichage et de classificationd es polygones puis exposer les problèmes*** ***Présenter les problèmes de géométrie sous forme de shémas / chorème ?***
+***Décrire la méthode d'affichage et de classification des polygones puis exposer les problèmes*** ***Présenter les problèmes de géométrie sous forme de shémas / chorème ?***
 
 Problème sémiologiques pour juger rapidement et efficacement dans un premier temps du polygone, puis dans un second temps des choix fait sur ce/ces polygones (contrôle).
 
@@ -85,9 +94,9 @@ Les tables suivantes décrivent l'année de sortie des OS pour les ordinateurs e
 Systèmes d'opération compatibles au 28/06/2022
 :::
 
-Comme on peut le voir sur la @tbl-panel, on peut imaginer des problèmes de compatibilité peut etre avec certains parcs informatiques/technologiques possiblement controlable avec des données économiques et de part de marché pour chaque pays. L'application a été massivement *(chiffre etude)*[@bailly2005] utilisée au moyen d'un téléphone, la @tbl-phone nous montre que pour bien fonctionner il faut des téléphones plutot récents, de moins de 2 ans... Ou en tout cas fonctionnant sur un OS récent (de nombreux anciens téléphones peuvent soutenirs de telles mises à jour mais pas tous).[^methodologie-1]
+Comme on peut le voir sur la @tbl-panel, on peut imaginer des problèmes de compatibilité peut etre avec certains parcs informatiques/technologiques possiblement controlable avec des données économiques et de part de marché pour chaque pays. L'application a été massivement *(chiffre etude)*[@bailly2005] utilisée au moyen d'un téléphone, la @tbl-phone nous montre que pour bien fonctionner il faut des téléphones plutot récents, de moins de 2 ans... Ou en tout cas fonctionnant sur un OS récent (de nombreux anciens téléphones peuvent soutenirs de telles mises à jour mais pas tous).[^02_methodologie-1]
 
-[^methodologie-1]: Ainsi les téléphone samsugn et Iphone peuvent etre plus performant et mieux mis à jour que des marques moins importantes n'assurant pas la compatibilité au cours du temps. [@noucher2015]
+[^02_methodologie-1]: Ainsi les téléphone samsugn et Iphone peuvent etre plus performant et mieux mis à jour que des marques moins importantes n'assurant pas la compatibilité au cours du temps. [@noucher2015]
 
 Test de l'application evisageable sur des sites de developpemetn web type "browserStack".
 
@@ -107,7 +116,3 @@ Test de l'application evisageable sur des sites de developpemetn web type "brows
     -   3 Villes par Pays
     -   240 etudiants par ville
     -   40 etudiants par discipline
-
-
-
-
