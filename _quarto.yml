@@ -27,8 +27,9 @@ bibliography: references.bib
 format:
   pdf:
     echo: false
-    documentclass: scrbook
-    papersize: a4
+    documentclass: book
+    papersize: a4paper
+    # classoption: 
     pagestyle: headings
     toc: true
     toc-title: "Table des matières"
@@ -42,11 +43,15 @@ format:
     linestretch: 1.5
     highlight-style: solarized 
     code-line-numbers: true
-    whitespace: 
+    whitespace: 0pt
     geometry: 
-      - margin = 2.5cm
-      # - headsep = 2pt
-      # - headheight = 1cm
+      - heightrounded
+      - margin = 25mm
+      # - headsep = 05cm
+      - headheight = 5cm
+      # - includehead = false
+      # - ignorehead = true
+      - showframe = true
     keep-tex: true
     include-in-header:
       - 00a_header.tex

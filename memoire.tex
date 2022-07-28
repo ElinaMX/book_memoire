@@ -4,8 +4,8 @@
 %
 \documentclass[
   12pt,
-  a4paper,
-]{scrbook}
+  a4paperpaper,
+]{book}
 
 \usepackage{amsmath,amssymb}
 \usepackage[]{gfsartemisia}
@@ -27,7 +27,8 @@
   \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
 \usepackage{xcolor}
-\usepackage[margin = 2.5cm]{geometry}
+\usepackage[heightrounded,margin = 25mm,headheight = 5cm,showframe =
+true]{geometry}
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{3}
 % Make \paragraph and \subparagraph free-standing
@@ -139,8 +140,17 @@
 
 % Set space between paragraphs and indent
 % \usepackage[skip=10pt plus1pt, indent=20pt]{parskip}
-\usepackage[skip=10pt plus1pt]{parskip}
-\parindent = 20pt
+
+
+
+% 
+% \usepackage[skip=10pt plus1pt]{parskip}
+% \parindent = 20pt
+
+
+
+
+
 % \oneandahalfspacing
 
 % \titleformat
@@ -512,13 +522,137 @@ Contexte (structure, projet, enjeux du projet, comment le stage s'insère
 dans le projet, quels acteurs sont rencontrés et quels sont leurs rôles)
 \end{quote}
 
-\hypertarget{eurobroadmap}{%
-\section{EuroBroadMap}\label{eurobroadmap}}
+\hypertarget{le-c.i.s.t}{%
+\section{Le C.I.S.T}\label{le-c.i.s.t}}
+
+Présentation de la Fédération de recherche, de sa structuration et des
+axes, en précisan qu'a terme je travaillerai ussi sur cers projets bien
+qu'ils ne fassent pas parti du stage.
+
+\hypertarget{imageun-et-lanr---dfg}{%
+\subsection{IMAGEUN et l'ANR - DFG}\label{imageun-et-lanr---dfg}}
+
+Présenter l'objectif principal du projet, les workshops et les acteurs.
+En venir au \textbf{Workshop - students} surlequel je travaille dans le
+cadre du stage et détailler mon rôle, expliquer la Base de donnée ce qui
+a été mis en place avant mon arrivée (de quoi je pars) dan les grandes
+lignes sans entrer dans les problèmes etc\ldots{}
+
+Présenter ensuite la collecte et la base de donnée générale : -
+temporalité effectifs objectifs réalisés ou non
+
+\hypertarget{eurobroadmap-et-glocal-map}{%
+\section{EuroBroadMap et Glocal Map}\label{eurobroadmap-et-glocal-map}}
 
 Les résultats Europe sont très normées, voir prévisibles, tandis que
 d'autres pays adoptent un regard plus critique vis à vis de l'Europe. -
 Chine mode, luxe, sp Afrique : Tunisie et Sénégal : crique sur le
 racisme / inégalité / colonialisme Brésil :
+
+\hypertarget{echuxe9ances}{%
+\section{Echéances}\label{echuxe9ances}}
+
+\begin{itemize}
+\tightlist
+\item
+  15 Juin - \textbf{50 ans de l'ANR DFG} : \emph{Production d'une
+  ``image'' comprenant des cartes lissées des premiers résultats pour la
+  France et l'allemagne ainsi que des nuages de mots décrivant l'Europe}
+\item
+  20/24 Juin - \textbf{Ecole d'Ete} : \emph{Pas directent en lien avec
+  le stage mais plutot avec les missions de la Fédération de recherche}
+\item
+  23/26 Juin - \textbf{Tachkent} : \emph{Préparation des données issues
+  des réponses turques pour la doctorante travaillant sur le projet. Il
+  s'agissait pour elle de présenter ces résultts à une conférence avec
+  le partenaire Turc.}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Typologie des polygones
+  \item
+    Cartographie de ces polygones
+  \item
+    Nettoyage de BD et réalisation d'un dictionnaire réduit à l'usage du
+    partenaire
+  \item
+    Production de graphiques et résultats statistiques préliminaires
+  \end{itemize}
+\item
+  \textbf{30 Juin : ARRET DE LA DIFFUSION DU QUESTIONNAIRE}
+\item
+  18/22 Juillet - \textbf{UGI - Congrès Centenaire de l'Union
+  Géographique Internationale} : \emph{Préparation des données propres
+  et prete à etre exploitées}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Typoogie des polygones restants
+  \item
+    Cartographie pour chaque pays / ville / université
+  \item
+    Graphiques pour chaque pays / ville / université
+  \item
+    \ldots{}
+  \end{itemize}
+\item
+  18 Septembre - \textbf{JIG Journée des jeunes chercheurs de l'institut
+  de géographie} : \emph{Réalisation d'un poster}
+\end{itemize}
+
+\hypertarget{objectifs}{%
+\section{Objectifs}\label{objectifs}}
+
+Livrer une base de donnée et des traitements s'inscrivant dans la
+reproductibilité, mais l'arrivée de la base de donnée finale s'étant
+faite tardivement nous avons plutôt opté pour une chaîne de traitement
+propre, dirigée vers les besoins immédiats des acteurs (Tachkent, UGI,
+mémoire). la mise en pacquage se fera certainement dans un deuxième
+temps, d'autant plus que le contrat se poursuit au delà du stage pour
+ces missions là (ainsi que pour de la valorisation).
+
+Il était donc question de mettre en place des traitements de géomatiques
+(SIG géotraitements des géométries et données spatialisées) ainsi que
+des traitements textuels (cordonner notamment la traduction). Il a fallu
+dans un premier temps me familiariser avec la base de donnée avant de
+détecter les problèmes et d'en proposer les corrections.
+
+Je suis partie d'une base de programmes ayant servis aux premières
+explorations (graphiques statistiques généraux sur les taux de réponses
+et premières visualisation des géométries). Mon travail a été
+d'améliorer et enrichir ces programmes (optimisation de la chaîne de
+traitement, des scripts et des temps d'exécution).
+
+\emph{Insérer ici un graphique de la chaine de traitement finale avec un
+code couleur pour les anciens et nouveaux scripts)}
+
+\hypertarget{quels-outils-pour-r-et-pas-un-sig-traditionnel}{%
+\section{Quels outils : Pour R et pas un SIG traditionnel
+?}\label{quels-outils-pour-r-et-pas-un-sig-traditionnel}}
+
+R est un langage de programmation RStudio est un IDE - Environnement de
+Programmation Intégré. Passer par R et R studio permet de tout faire un
+sein de la meme interface. La base de donné se compose, comme dit plus
+haut, d'une partie textuelle, résultat d'enquete qualitative
+traditionnelle, et d'une partie ``géomatique/géométrique''. R/ RStudio
+nous permet d'appréhender à la fois le traitement textutel (expresion
+régulieres \ldots), les géotraitements (buffer, répartation de
+géométries\ldots), les représentation graphiques et cartographiques, les
+statistiques (simples et complexes). Enfin R/Rstudio permettent aussi la
+programmation lettrée* \emph{(inserer la définition'')}. et donc de
+produire des documents mise en lignes (document de présentationd ela
+base de donnée) ou scientifiques, ou universitaires directement à partir
+des données bruts et des scripts produits (c'est le cas de ce mémoire).
+
+\hypertarget{pourquoi-r-et-pas-un-autre-langage-de-programmation}{%
+\subsection{Pourquoi R et pas un autre langage de programmation
+?}\label{pourquoi-r-et-pas-un-autre-langage-de-programmation}}
+
+Car il s'agit de l'outil utilisé dans les laboratoire à mon arrivée et
+qu'il se prete parfaitement à l'analyse statistique et graphique
+puisu'il a été conçu pour ça. \emph{ref}
 
 \bookmarksetup{startatroot}
 
@@ -542,6 +676,11 @@ références bibliographiques.
 \hypertarget{la-chaine-de-traitement}{%
 \section{La chaine de traitement}\label{la-chaine-de-traitement}}
 
+Comment avons nous travailler ? - Exploration et découverte de la base
+de donnée - Control et détection des anomalies avant de rentrer dans les
+traitements - Exploration et nettoyage (detection se poursuis) -
+Géométries
+
 \hypertarget{traitement-de-la-base-de-donnuxe9e-guxe9omuxe9tries}{%
 \section{Traitement de la base de donnée
 ``géométries''}\label{traitement-de-la-base-de-donnuxe9e-guxe9omuxe9tries}}
@@ -551,6 +690,8 @@ Pour produire des tableaux à la volée (BDG \& BDR) et les gaphiques,
 cartes, statistiques qui en découlent. Ce travail necessite
 l'identification précise de productions pour chacun de ces volets (quels
 graphiques sur quelles données, etc).
+
+la methode
 
 \hypertarget{guxe9omuxe9tries-et-leur-classification-enjeux-muxe9thodologiques}{%
 \subsection{Géométries et leur classification : enjeux
@@ -563,9 +704,9 @@ méthodologiques}\label{guxe9omuxe9tries-et-leur-classification-enjeux-muxe9thod
   l'espace décrit (notamment lorsque le mot attribué correspond à cet
   espace).
 \item
-  Quel ordre des polygones pour un meme mot donnée
+  Quel ordre des polygones pour un même mot donnée
 \item
-  Justifier l'interet de juger à l'oeil (controle humain face à la
+  Justifier l'intérêt de juger à l'œil (contrôle humain face à la
   redondance de la tache).
 \item
   Justifier l'usage des menus e leur pertinences vis à vis d'une
@@ -601,7 +742,7 @@ standardiser ?
 \subsection{La visualisation pour
 exploration}\label{la-visualisation-pour-exploration}}
 
-\textbf{\emph{Décrire la méthode d'affichage et de classificationd es
+\textbf{\emph{Décrire la méthode d'affichage et de classification des
 polygones puis exposer les problèmes}} \textbf{\emph{Présenter les
 problèmes de géométrie sous forme de shémas / chorème ?}}
 
@@ -818,7 +959,8 @@ frontiere ???)
 \chapter{Résultats}\label{ruxe9sultats}}
 
 Ils comportent les éléments qui permettent d'apprécier si la démarche,
-la méthode, etc\ldots{} sont utilisables, généralisables \ldots.
+la méthode, etc\ldots{} sont utilisables, généralisables \ldots. \#\#
+Les sous-corpus
 
 \hypertarget{poursuites-et-valorisation}{%
 \section{Poursuites et valorisation}\label{poursuites-et-valorisation}}
@@ -852,7 +994,32 @@ L'interet d'un package :
 \textbf{Faire la différence entre valorisation/diffusion et
 ``reproductibilité''}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\hypertarget{ce-quil-reste-uxe0-faire}{%
+\section{Ce qu'il reste à faire}\label{ce-quil-reste-uxe0-faire}}
+
+Harmoniser les champs de texte et travailler sur leur diffusion à
+l'étranger (on parle de traduction en une seule langue (anglais ou
+français ?) ou d'indexation en wikidata).
+
+Rédiger la documentation de la base de donnée sous forme de notebook
+accessible en ligne
+
+Mettre à disposition la base de donnée et les scripts permettant son
+exploitation. Cette mise à disposition sous-entend la rédaction d'un PGD
+\emph{ref}, de réfléchir à la plateforme qui l'acceuillera (NAKALA en
+recherche pour les données, masis possible sur GITLAB humanum et GIT
+HUB), et quelle documentation.
+
+\hypertarget{perspectives}{%
+\section{Perspectives}\label{perspectives}}
+
+Atlas interactif peut etre ? sous quelle forme car ily a des questions
+sur la sensibilite des données et leur exploitation par des tiers, on
+aune responsabilité quant à ce qu'on fait de l'outil mis à dispositon.
+
+\hypertarget{quelles-missions-annexes}{%
+\section{\#\# Quelles missions annexes
+?}\label{quelles-missions-annexes}}
 
 This is a Quarto book.
 

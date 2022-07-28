@@ -35,13 +35,13 @@ Les résultats Europe sont très normées, voir prévisibles, tandis que d'autre
 -   18 Septembre - **JIG Journée des jeunes chercheurs de l'institut de géographie** : *Réalisation d'un poster*
 
 ## Objectifs
-Livrer une base de donnée et des traitements s'inscrivant dans la reproductibilité, mais l'arrivée de la base de donnée finale s'etant faite tardivement nous avons plutot opté pour une chaine de traitement propre, dirigée vers les besoins immédiats des acteurs (Tachkent, UGI,  mémoire). la mise en package se fera certainement dans un deuxieme temps, d'autna plus que le contrat se poursuit au dela du stage pour ces missions là (ainsi que pour de la valorisation).
+Livrer une base de donnée et des traitements s'inscrivant dans la reproductibilité, mais l'arrivée de la base de donnée finale s’étant faite tardivement nous avons plutôt opté pour une chaîne de traitement propre, dirigée vers les besoins immédiats des acteurs (Tachkent, UGI,  mémoire). la mise en pacquage se fera certainement dans un deuxième temps, d’autant plus que le contrat se poursuit au delà du stage pour ces missions là (ainsi que pour de la valorisation).
 
 
-Il était donc question de mettre en place des traitements de géomatiques (SIG géotraitements des géométries et données spatialisées) ainsi que des traitements textuels (cordonner notamement la traduction). 
-Il a fallu dans un premier temps me familiariser avec la base de donnée avant de détecter les problèmes et d'en proposer lse corrections. 
+Il était donc question de mettre en place des traitements de géomatiques (SIG géotraitements des géométries et données spatialisées) ainsi que des traitements textuels (cordonner notamment la traduction). 
+Il a fallu dans un premier temps me familiariser avec la base de donnée avant de détecter les problèmes et d'en proposer les corrections. 
 
-Je suis partie d'une base de programmes ayant servis aux premieres explorations (graphiques statistiques généraux sur les taux de réponses et premières visualisation des gféométries). Mon travail a été d'améliorer et enrichir ces programmes (optimisation de la chaine de traitement, des scripts et des temps d'exécution).
+Je suis partie d'une base de programmes ayant servis aux premières explorations (graphiques statistiques généraux sur les taux de réponses et premières visualisation des géométries). Mon travail a été d'améliorer et enrichir ces programmes (optimisation de la chaîne de traitement, des scripts et des temps d'exécution).
 
 *Insérer ici un graphique de la chaine de traitement finale avec un code couleur pour les anciens et nouveaux scripts)*
 
@@ -54,7 +54,7 @@ RStudio est un IDE - Environnement de Programmation Intégré.
  Passer par R et R studio permet de tout faire un sein de la meme interface. La base de donné se compose, comme dit plus haut,  d'une partie textuelle, résultat d'enquete qualitative traditionnelle, et d'une partie "géomatique/géométrique". R/ RStudio nous permet d'appréhender à la fois le traitement textutel (expresion régulieres ...), les géotraitements (buffer, répartation de géométries...), les représentation graphiques et cartographiques, les statistiques (simples et complexes). 
  Enfin R/Rstudio permettent aussi la programmation lettrée* *(inserer la définition")*.  et donc de produire des documents mise en lignes (document de présentationd ela base de donnée) ou scientifiques, ou universitaires directement à partir des données bruts et des scripts produits (c'est le cas de ce mémoire). 
  
- ### Pourquoi R et pas un autre langage de programmation ? 
+### Pourquoi R et pas un autre langage de programmation ? 
  Car il s'agit de l'outil utilisé dans les laboratoire à mon arrivée et qu'il se prete parfaitement à l'analyse statistique et graphique puisu'il a été conçu pour ça. *ref*
  
  

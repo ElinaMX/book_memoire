@@ -12,7 +12,7 @@ Comment avons nous travailler ?
 - Exploration et nettoyage (detection se poursuis)
 - Géométries
 
-## 
+
 ## Traitement de la base de donnée "géométries"
 
 Possibilité de créer un package pour exploiter les données.\
